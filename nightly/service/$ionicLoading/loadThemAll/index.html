@@ -1,15 +1,13 @@
 <!doctype html>
-<html ng-app="collectionRepeatContacts" ng-controller="IonicDemoCtrl">
+<html ng-app="loadingThemAll" ng-controller="IonicDemoCtrl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 <link rel="stylesheet" href="http://code.ionicframework.com/nightly/css/ionic.min.css">
 
-<link rel="stylesheet" href="/nightly/directive/collectionRepeat/contacts/css.css">
-
 <script src="http://code.ionicframework.com/nightly/js/ionic.bundle.min.js"></script>
 
-<script src="/nightly/directive/collectionRepeat/contacts/javascript.js"></script>
+<script src="/nightly/service/$ionicLoading/loadThemAll/javascript.js"></script>
 
 </head>
 <body>
@@ -18,34 +16,31 @@
 
 <div class="demo-content-pane">
 
-  <div ng-controller="ContactsCtrl">
+  <div ng-controller="LoadingCtrl">
   <ion-header-bar class="bar-positive">
-    <h1 class="title">1000 Contacts</h1>
-    <div class="button" ng-click="scrollBottom()">
-      Bottom
-    </div>
-  </ion-header-bar>
-  <ion-header-bar class="bar-light bar-subheader">
-    <input type="search"
-      placeholder="Filter contacts..."
-      ng-model="search"
-      ng-change="scrollTop()">
-    <button ng-if="search.length"
-      class="button button-icon ion-android-close input-button"
-      ng-click="clearSearch()">
-    </button>
+    <h1 class="title">Loading Demo</h1>
+    <a class="button" ng-click="showLoading()">
+      <i class="icon ion-more"></i> Load
+    </a>
   </ion-header-bar>
   <ion-content>
     <div class="list">
-      <a class="item contact-item"
-        collection-repeat="item in getContacts()"
-        collection-item-height="getItemHeight(item)"
-        collection-item-width="100 + '%'"
-        ng-style="{'line-height': getItemHeight(item) + 'px'}"
-        ng-class="{'item-divider': item.isLetter}">
-        <img ng-if="!item.isLetter" ng-src="http://placekitten.com/60/{{55 + ($index % 10)}}">
-        {{item.letter || (item.first_name+' '+item.last_name)}}
-      </a>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Loading Duration (ms)</span>
+        <input type="number" ng-model="loadingOptions.duration">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Loading Delay (ms)</span>
+        <input type="number" ng-model="loadingOptions.delay">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Loading Template</span>
+        <textarea rows="3" ng-model="loadingOptions.template"></textarea>
+      </label>
+      <ion-toggle class="item item-toggle"
+                  ng-model="loadingOptions.noBackdrop">
+        Hide Backdrop?
+      </ion-toggle>
     </div>
   </ion-content>
 </div>

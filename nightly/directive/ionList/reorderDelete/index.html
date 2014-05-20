@@ -1,15 +1,13 @@
 <!doctype html>
-<html ng-app="collectionRepeatContacts" ng-controller="IonicDemoCtrl">
+<html ng-app="listEverything" ng-controller="IonicDemoCtrl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 <link rel="stylesheet" href="http://code.ionicframework.com/nightly/css/ionic.min.css">
 
-<link rel="stylesheet" href="/nightly/directive/collectionRepeat/contacts/css.css">
-
 <script src="http://code.ionicframework.com/nightly/js/ionic.bundle.min.js"></script>
 
-<script src="/nightly/directive/collectionRepeat/contacts/javascript.js"></script>
+<script src="/nightly/directive/ionList/reorderDelete/javascript.js"></script>
 
 </head>
 <body>
@@ -18,35 +16,42 @@
 
 <div class="demo-content-pane">
 
-  <div ng-controller="ContactsCtrl">
+  <div ng-controller="ListCtrl">
   <ion-header-bar class="bar-positive">
-    <h1 class="title">1000 Contacts</h1>
-    <div class="button" ng-click="scrollBottom()">
-      Bottom
-    </div>
-  </ion-header-bar>
-  <ion-header-bar class="bar-light bar-subheader">
-    <input type="search"
-      placeholder="Filter contacts..."
-      ng-model="search"
-      ng-change="scrollTop()">
-    <button ng-if="search.length"
-      class="button button-icon ion-android-close input-button"
-      ng-click="clearSearch()">
-    </button>
+    <a class="button" ng-click="toggleDelete()">
+      Delete
+    </a>
+    <h1 class="title">List</h1>
+    <a class="button" ng-click="toggleReorder()">
+      Reorder
+    </a>
   </ion-header-bar>
   <ion-content>
-    <div class="list">
-      <a class="item contact-item"
-        collection-repeat="item in getContacts()"
-        collection-item-height="getItemHeight(item)"
-        collection-item-width="100 + '%'"
-        ng-style="{'line-height': getItemHeight(item) + 'px'}"
-        ng-class="{'item-divider': item.isLetter}">
-        <img ng-if="!item.isLetter" ng-src="http://placekitten.com/60/{{55 + ($index % 10)}}">
-        {{item.letter || (item.first_name+' '+item.last_name)}}
-      </a>
-    </div>
+    <ion-list show-delete="data.showDelete"
+              show-reorder="data.showReorder">
+      <ion-item ng-repeat="item in items"
+                class="item-thumbnail-left">
+
+        <img ng-src="http://placekitten.com/{{60+$index}}/{{61+2*$index}}">
+        <h2>Item {{item}}</h2>
+        <p>Here's an item description.</p>
+        <ion-option-button class="button-positive"
+                           ng-click="share(item)">
+          Share
+        </ion-option-button>
+        <ion-option-button class="button-info"
+                           ng-click="edit(item)">
+          Edit
+        </ion-option-button>
+        <ion-delete-button class="ion-minus-circled"
+                           ng-click="items.splice($index, 1)">
+        </ion-delete-button>
+        <ion-reorder-button class="ion-navicon"
+                            on-reorder="reorderItem(item, $fromIndex, $toIndex)">
+        </ion-reorder-button>
+
+      </ion-item>
+    </ion-list>
   </ion-content>
 </div>
 

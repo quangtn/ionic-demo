@@ -1,15 +1,13 @@
 <!doctype html>
-<html ng-app="collectionRepeatContacts" ng-controller="IonicDemoCtrl">
+<html ng-app="refresherList" ng-controller="IonicDemoCtrl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 <link rel="stylesheet" href="http://code.ionicframework.com/nightly/css/ionic.min.css">
 
-<link rel="stylesheet" href="/nightly/directive/collectionRepeat/contacts/css.css">
-
 <script src="http://code.ionicframework.com/nightly/js/ionic.bundle.min.js"></script>
 
-<script src="/nightly/directive/collectionRepeat/contacts/javascript.js"></script>
+<script src="/nightly/directive/ionRefresher/withAList/javascript.js"></script>
 
 </head>
 <body>
@@ -18,37 +16,23 @@
 
 <div class="demo-content-pane">
 
-  <div ng-controller="ContactsCtrl">
   <ion-header-bar class="bar-positive">
-    <h1 class="title">1000 Contacts</h1>
-    <div class="button" ng-click="scrollBottom()">
-      Bottom
-    </div>
-  </ion-header-bar>
-  <ion-header-bar class="bar-light bar-subheader">
-    <input type="search"
-      placeholder="Filter contacts..."
-      ng-model="search"
-      ng-change="scrollTop()">
-    <button ng-if="search.length"
-      class="button button-icon ion-android-close input-button"
-      ng-click="clearSearch()">
-    </button>
-  </ion-header-bar>
-  <ion-content>
-    <div class="list">
-      <a class="item contact-item"
-        collection-repeat="item in getContacts()"
-        collection-item-height="getItemHeight(item)"
-        collection-item-width="100 + '%'"
-        ng-style="{'line-height': getItemHeight(item) + 'px'}"
-        ng-class="{'item-divider': item.isLetter}">
-        <img ng-if="!item.isLetter" ng-src="http://placekitten.com/60/{{55 + ($index % 10)}}">
-        {{item.letter || (item.first_name+' '+item.last_name)}}
-      </a>
-    </div>
-  </ion-content>
-</div>
+  <h1 class="title">Refresher</h1>
+</ion-header-bar>
+
+<ion-content ng-controller="RefresherCtrl">
+
+  <ion-refresher on-refresh="doRefresh()" 
+                 pulling-text="Pull to refresh..." 
+                 refreshing-text="Refreshing!" 
+                 refreshing-icon="ion-loading-c">
+  </ion-refresher>
+
+  <ion-list>
+    <ion-item ng-repeat="item in items">{{item}}</ion-item>
+  </ion-list>
+
+</ion-content>
 
 </div>
 <div class="bar bar-footer bar-light demo-footer" ng-click="$demoModal.show()">
