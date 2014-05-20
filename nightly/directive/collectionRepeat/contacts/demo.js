@@ -28,7 +28,8 @@ angular.module('collectionRepeatContacts'
   
     $scope.$demo = DEMO;
     $ionicModal.fromTemplateUrl('ionic-demo-modal.html', {
-      scope: $scope
+      scope: $scope,
+      focusFirstInput: false
     }).then(function(modal) {
       $scope.$demoModal = modal;
     });
