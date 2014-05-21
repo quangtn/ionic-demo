@@ -15,7 +15,7 @@ var DEMO;
   },
   "css": {
     "path": "nightly/directive/ionList/animated/css.css",
-    "content": ".animated-item .item-note .button {\n  margin-top: 10px;\n}\n.animated-item {\n  line-height: 52px;\n  padding-top: 0;\n  padding-bottom: 0;\n  -webkit-transition: all 0.15s linear;\n  -moz-transition: all 0.15s linear;\n  transition: all 0.15s linear;\n}\n.animated-item.ng-leave.ng-leave-active,\n.animated-item.ng-enter {\n  opacity: 0;\n  max-height: 0;\n}\n.animated-item.ng-leave,\n.animated-item.ng-enter.ng-enter-active {\n  opacity: 1;\n  max-height: 52px;\n}"
+    "content": ".animated-item .item-note .button {\n  margin-top: 10px;\n}\n.animated-item {\n  line-height: 52px;\n  max-height: 52px;\n  padding-top: 0;\n  padding-bottom: 0;\n  -webkit-transition: all 0.15s linear;\n  -moz-transition: all 0.15s linear;\n  transition: all 0.15s linear;\n}\n.animated-item.ng-leave.ng-leave-active,\n.animated-item.ng-enter {\n  opacity: 0;\n  max-height: 0;\n}\n.animated-item.ng-leave,\n.animated-item.ng-enter.ng-enter-active {\n  opacity: 1;\n  max-height: 52px;\n}"
   }
 };
 
