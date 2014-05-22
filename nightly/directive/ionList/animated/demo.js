@@ -7,11 +7,11 @@ var DEMO;
   "href": "/nightly/directive/ionList/animated",
   "javascript": {
     "path": "nightly/directive/ionList/animated/javascript.js",
-    "content": "angular.module('listAnimated', ['ionic'])\n.controller('AnimatedListCtrl', function($scope, $timeout) {\n  var nextItem = 0;\n  $scope.items = [];\n  for (var i=0; i < 5; i++) {\n    $scope.items.push('Item ' + (nextItem++));\n  }\n\n  $scope.addItem = function(atIndex) {\n    $scope.items.splice(atIndex + 1, 0, 'Item ' + nextItem);\n    nextItem++;\n  };\n});"
+    "content": "angular.module('listAnimated', ['ionic'])\n.controller('AnimatedListCtrl', function($scope, $timeout) {\n  var nextItem = 0;\n  $scope.items = [];\n  for (var i=0; i < 5; i++) {\n    $scope.items.push('Item ' + (nextItem++));\n  }\n\n  $scope.addItem = function(atIndex) {\n    $scope.items.splice(atIndex + 1, 0, 'Item ' + nextItem);\n    nextItem++;\n  };\n});\n"
   },
   "html": {
     "path": "nightly/directive/ionList/animated/html.html",
-    "content": "<div ng-controller=\"AnimatedListCtrl\">\n  <ion-header-bar class=\"bar-positive\">\n    <h1 class=\"title\">Animated List</h1>\n  </ion-header-bar>\n  <ion-content>\n    <ion-list show-delete=\"showDelete\">\n\n      <ion-item class=\"animated-item\"\n                ng-repeat=\"item in items\">\n        {{item}}\n        <div class=\"item-note\">\n          <a class=\"button button-small\"\n             ng-click=\"addItem($index)\">\n             Add\n          </a>\n          <a class=\"button button-small\"\n             ng-click=\"items.splice($index, 1)\">\n            Remove\n          </a>\n        </div>\n      </ion-item>\n\n    </ion-list>\n  </ion-content>\n</div>"
+    "content": "<div ng-controller=\"AnimatedListCtrl\">\n  <ion-header-bar class=\"bar-positive\">\n    <h1 class=\"title\">Animated List</h1>\n  </ion-header-bar>\n  <ion-content>\n    <ion-list show-delete=\"showDelete\">\n\n      <ion-item class=\"animated-item\"\n                ng-repeat=\"item in items\">\n        {{item}}\n        <div class=\"item-note\">\n          <a class=\"button button-small\"\n             ng-click=\"addItem($index)\">\n             Add\n          </a>\n          <a class=\"button button-small\"\n             ng-click=\"items.splice($index, 1)\">\n            Remove\n          </a>\n        </div>\n      </ion-item>\n\n    </ion-list>\n  </ion-content>\n</div>\n"
   },
   "css": {
     "path": "nightly/directive/ionList/animated/css.css",
@@ -44,7 +44,7 @@ angular.module('listAnimated'
     }, document.querySelector('.demo-footer'));
 
     $scope.demoScratch = function(demo) {
-      var form = angular.element('<form method="POST" action="http://scratch.ionicsdk.com/embed">');
+      var form = angular.element('<form method="POST" action="http://scratch.ionicsdk.com/embed" target="_blank">');
 
       var htmlInput = angular.element('<textarea type="text" name="html">')
       .val(['<html ng-app="listAnimated">',
@@ -73,10 +73,6 @@ angular.module('listAnimated'
 
            document.body.appendChild(form[0]);
            form[0].submit();
-
-           $ionicLoading.show({
-             template: 'Opening in Scratchpad...'
-           });
     };
     
 })

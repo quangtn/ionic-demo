@@ -10,3 +10,4 @@ angular.module('footerBarSimple', ['ionic'])
     $scope.items.push('Item ' + i);
   }
 });
+

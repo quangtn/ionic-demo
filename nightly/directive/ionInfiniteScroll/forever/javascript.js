@@ -17,3 +17,4 @@ angular.module('infiniteScrollForever', ['ionic'])
     }, 1000);
   };
 });
+

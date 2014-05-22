@@ -7,11 +7,11 @@ var DEMO;
   "href": "/nightly/directive/ionRefresher/withAList",
   "javascript": {
     "path": "nightly/directive/ionRefresher/withAList/javascript.js",
-    "content": "angular.module('refresherList', ['ionic'])\n.controller('RefresherCtrl', function($scope, $timeout) {\n  $scope.items = ['Item 1', 'Item 2', 'Item 3'];\n\n  $scope.doRefresh = function() {\n    $timeout(function() {\n      $scope.items.push('New Item ' + Math.floor(Math.random() * 1000) + 4);\n      $scope.items.push('New Item ' + Math.floor(Math.random() * 1000) + 4);\n      $scope.items.push('New Item ' + Math.floor(Math.random() * 1000) + 4);\n      $scope.items.push('New Item ' + Math.floor(Math.random() * 1000) + 4);\n      $scope.$broadcast('scroll.refreshComplete');\n    }, 1000);\n  };\n});"
+    "content": "angular.module('refresherList', ['ionic'])\n.controller('RefresherCtrl', function($scope, $timeout) {\n  $scope.items = ['Item 1', 'Item 2', 'Item 3'];\n\n  $scope.doRefresh = function() {\n    $timeout(function() {\n      $scope.items.push('New Item ' + Math.floor(Math.random() * 1000) + 4);\n      $scope.items.push('New Item ' + Math.floor(Math.random() * 1000) + 4);\n      $scope.items.push('New Item ' + Math.floor(Math.random() * 1000) + 4);\n      $scope.items.push('New Item ' + Math.floor(Math.random() * 1000) + 4);\n      $scope.$broadcast('scroll.refreshComplete');\n    }, 1000);\n  };\n});\n"
   },
   "html": {
     "path": "nightly/directive/ionRefresher/withAList/html.html",
-    "content": "<ion-header-bar class=\"bar-positive\">\n  <h1 class=\"title\">Refresher</h1>\n</ion-header-bar>\n\n<ion-content ng-controller=\"RefresherCtrl\">\n\n  <ion-refresher on-refresh=\"doRefresh()\" \n                 pulling-text=\"Pull to refresh...\" \n                 refreshing-text=\"Refreshing!\" \n                 refreshing-icon=\"ion-loading-c\">\n  </ion-refresher>\n\n  <ion-list>\n    <ion-item ng-repeat=\"item in items\">{{item}}</ion-item>\n  </ion-list>\n\n</ion-content>"
+    "content": "<ion-header-bar class=\"bar-positive\">\n  <h1 class=\"title\">Refresher</h1>\n</ion-header-bar>\n\n<ion-content ng-controller=\"RefresherCtrl\">\n\n  <ion-refresher on-refresh=\"doRefresh()\"\n                 pulling-text=\"Pull to refresh...\"\n                 refreshing-text=\"Refreshing!\"\n                 refreshing-icon=\"ion-loading-c\">\n  </ion-refresher>\n\n  <ion-list>\n    <ion-item ng-repeat=\"item in items\">{{item}}</ion-item>\n  </ion-list>\n\n</ion-content>"
   }
 };
 
@@ -40,7 +40,7 @@ angular.module('refresherList'
     }, document.querySelector('.demo-footer'));
 
     $scope.demoScratch = function(demo) {
-      var form = angular.element('<form method="POST" action="http://scratch.ionicsdk.com/embed">');
+      var form = angular.element('<form method="POST" action="http://scratch.ionicsdk.com/embed" target="_blank">');
 
       var htmlInput = angular.element('<textarea type="text" name="html">')
       .val(['<html ng-app="refresherList">',
@@ -69,10 +69,6 @@ angular.module('refresherList'
 
            document.body.appendChild(form[0]);
            form[0].submit();
-
-           $ionicLoading.show({
-             template: 'Opening in Scratchpad...'
-           });
     };
     
 })

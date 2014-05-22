@@ -7,7 +7,7 @@ var DEMO;
   "href": "/nightly/directive/ionSideMenus/simple",
   "javascript": {
     "path": "nightly/directive/ionSideMenus/simple/javascript.js",
-    "content": "var app = angular.module('sideMenusSimple', ['ionic']);\napp.controller('SideMenusSimpleCtrl', function($scope, $ionicSideMenuDelegate) {\n\n  $scope.toggleLeft = function() {\n    $ionicSideMenuDelegate.toggleLeft();\n  };\n\n});"
+    "content": "var app = angular.module('sideMenusSimple', ['ionic']);\napp.controller('SideMenusSimpleCtrl', function($scope, $ionicSideMenuDelegate) {\n\n  $scope.toggleLeft = function() {\n    $ionicSideMenuDelegate.toggleLeft();\n  };\n\n});\n"
   },
   "html": {
     "path": "nightly/directive/ionSideMenus/simple/html.html",
@@ -40,7 +40,7 @@ angular.module('sideMenusSimple'
     }, document.querySelector('.demo-footer'));
 
     $scope.demoScratch = function(demo) {
-      var form = angular.element('<form method="POST" action="http://scratch.ionicsdk.com/embed">');
+      var form = angular.element('<form method="POST" action="http://scratch.ionicsdk.com/embed" target="_blank">');
 
       var htmlInput = angular.element('<textarea type="text" name="html">')
       .val(['<html ng-app="sideMenusSimple">',
@@ -69,10 +69,6 @@ angular.module('sideMenusSimple'
 
            document.body.appendChild(form[0]);
            form[0].submit();
-
-           $ionicLoading.show({
-             template: 'Opening in Scratchpad...'
-           });
     };
     
 })

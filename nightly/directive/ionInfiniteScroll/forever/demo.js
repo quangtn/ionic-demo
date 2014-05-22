@@ -7,7 +7,7 @@ var DEMO;
   "href": "/nightly/directive/ionInfiniteScroll/forever",
   "javascript": {
     "path": "nightly/directive/ionInfiniteScroll/forever/javascript.js",
-    "content": "angular.module('infiniteScrollForever', ['ionic'])\n.controller('ForeverCtrl', function($scope, $timeout) {\n  $scope.items = [];\n  for (var i = 0; i < 20; i++) {\n    $scope.items.push(i);\n  }\n\n  //Load more after 1 second delay\n  $scope.loadMoreItems = function() {\n    $timeout(function() {\n      var i = $scope.items.length;\n      var j = $scope.items.length + 5;\n      for (; i < j; i++) {\n        $scope.items.push('Item ' + i);\n      }\n      $scope.$broadcast('scroll.infiniteScrollComplete');\n    }, 1000);\n  };\n});"
+    "content": "angular.module('infiniteScrollForever', ['ionic'])\n.controller('ForeverCtrl', function($scope, $timeout) {\n  $scope.items = [];\n  for (var i = 0; i < 20; i++) {\n    $scope.items.push(i);\n  }\n\n  //Load more after 1 second delay\n  $scope.loadMoreItems = function() {\n    $timeout(function() {\n      var i = $scope.items.length;\n      var j = $scope.items.length + 5;\n      for (; i < j; i++) {\n        $scope.items.push('Item ' + i);\n      }\n      $scope.$broadcast('scroll.infiniteScrollComplete');\n    }, 1000);\n  };\n});\n"
   },
   "html": {
     "path": "nightly/directive/ionInfiniteScroll/forever/html.html",
@@ -40,7 +40,7 @@ angular.module('infiniteScrollForever'
     }, document.querySelector('.demo-footer'));
 
     $scope.demoScratch = function(demo) {
-      var form = angular.element('<form method="POST" action="http://scratch.ionicsdk.com/embed">');
+      var form = angular.element('<form method="POST" action="http://scratch.ionicsdk.com/embed" target="_blank">');
 
       var htmlInput = angular.element('<textarea type="text" name="html">')
       .val(['<html ng-app="infiniteScrollForever">',
@@ -69,10 +69,6 @@ angular.module('infiniteScrollForever'
 
            document.body.appendChild(form[0]);
            form[0].submit();
-
-           $ionicLoading.show({
-             template: 'Opening in Scratchpad...'
-           });
     };
     
 })

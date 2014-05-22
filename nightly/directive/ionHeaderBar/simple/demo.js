@@ -7,7 +7,7 @@ var DEMO;
   "href": "/nightly/directive/ionHeaderBar/simple",
   "javascript": {
     "path": "nightly/directive/ionHeaderBar/simple/javascript.js",
-    "content": "angular.module('headerBarSimple', ['ionic'])\n.controller('HeaderBarSimpleCtrl', function($scope) {\n  $scope.data = {\n    isSubheader: false,\n    isShown: true\n  };\n  $scope.items = [];\n  for (var i = 0; i < 20; i++) {\n    $scope.items.push('Item ' + i);\n  }\n});"
+    "content": "angular.module('headerBarSimple', ['ionic'])\n.controller('HeaderBarSimpleCtrl', function($scope) {\n  $scope.data = {\n    isSubheader: false,\n    isShown: true\n  };\n  $scope.items = [];\n  for (var i = 0; i < 20; i++) {\n    $scope.items.push('Item ' + i);\n  }\n});\n"
   },
   "html": {
     "path": "nightly/directive/ionHeaderBar/simple/html.html",
@@ -40,7 +40,7 @@ angular.module('headerBarSimple'
     }, document.querySelector('.demo-footer'));
 
     $scope.demoScratch = function(demo) {
-      var form = angular.element('<form method="POST" action="http://scratch.ionicsdk.com/embed">');
+      var form = angular.element('<form method="POST" action="http://scratch.ionicsdk.com/embed" target="_blank">');
 
       var htmlInput = angular.element('<textarea type="text" name="html">')
       .val(['<html ng-app="headerBarSimple">',
@@ -69,10 +69,6 @@ angular.module('headerBarSimple'
 
            document.body.appendChild(form[0]);
            form[0].submit();
-
-           $ionicLoading.show({
-             template: 'Opening in Scratchpad...'
-           });
     };
     
 })

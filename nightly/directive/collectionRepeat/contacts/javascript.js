@@ -85,3 +85,4 @@ angular.module('collectionRepeatContacts', ['ionic'])
     $scope.search = '';
   };
 });
+

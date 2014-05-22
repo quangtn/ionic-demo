@@ -1,16 +1,14 @@
 <!doctype html>
-<html ng-app="listAnimated" ng-controller="IonicDemoCtrl">
+<html ng-app="popupSimple" ng-controller="IonicDemoCtrl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 <link rel="stylesheet" href="http://code.ionicframework.com/nightly/css/ionic.min.css">
 
-<link rel="stylesheet" href="/nightly/directive/ionList/animated/css.css">
-
 <script src="http://code.ionicframework.com/nightly/js/ionic.bundle.min.js"></script>
 <script src="/nightly/demo-list.js"></script>
 
-<script src="/nightly/directive/ionList/animated/javascript.js"></script>
+<script src="/nightly/service/$ionicPopup/simple/javascript.js"></script>
 
 <script src="demo.js"></script>
 </head>
@@ -20,32 +18,23 @@
 
 <div class="demo-content-pane">
 
-  <div ng-controller="AnimatedListCtrl">
-  <ion-header-bar class="bar-positive">
-    <h1 class="title">Animated List</h1>
-  </ion-header-bar>
-  <ion-content>
-    <ion-list show-delete="showDelete">
+  <ion-content ng-controller="PopupCtrl">
+  <button class="button button-dark" ng-click="showPopup()">Generic</button>
+  <button class="button button-primary" ng-click="showConfirm()">Confirm</button>
+  <button class="button button-balanced" ng-click="showPrompt()">Prompt</button>
+  <button class="button button-balanced" ng-click="showPasswordPrompt()">Password Prompt</button>
+  <button class="button button-positive" ng-click="showAlert()">Alert</button>
+  <div class="list">
+    <a class="item" href="#" 
+      ng-repeat="item in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]">
+      Item {{item}}
+    </a>
+  </div>
+</ion-content>
 
-      <ion-item class="animated-item"
-                ng-repeat="item in items">
-        {{item}}
-        <div class="item-note">
-          <a class="button button-small"
-             ng-click="addItem($index)">
-             Add
-          </a>
-          <a class="button button-small"
-             ng-click="items.splice($index, 1)">
-            Remove
-          </a>
-        </div>
-      </ion-item>
-
-    </ion-list>
-  </ion-content>
-</div>
-
+<script id="popup-template.html" type="text/ng-template">
+  <input ng-model="data.wifi" type="text" placeholder="Password">
+</script>
 
 </div>
 <div class="bar bar-footer bar-light demo-footer" ng-click="$demoModal.show()">

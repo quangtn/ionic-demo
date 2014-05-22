@@ -11,3 +11,4 @@ angular.module('listAnimated', ['ionic'])
     nextItem++;
   };
 });
+

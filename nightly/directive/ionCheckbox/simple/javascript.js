@@ -23,3 +23,4 @@ app.controller('CheckboxSimpleCtrl', function($scope) {
     }
   };
 });
+

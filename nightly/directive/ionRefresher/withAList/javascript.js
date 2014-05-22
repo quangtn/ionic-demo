@@ -12,3 +12,4 @@ angular.module('refresherList', ['ionic'])
     }, 1000);
   };
 });
+

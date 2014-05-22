@@ -7,7 +7,7 @@ var DEMO;
   "href": "/nightly/directive/ionFooterBar/simple",
   "javascript": {
     "path": "nightly/directive/ionFooterBar/simple/javascript.js",
-    "content": "angular.module('footerBarSimple', ['ionic'])\n.controller('FooterBarSimpleCtrl', function($scope) {\n  $scope.data = {\n    isSubfooter: false,\n    isShown: true\n  };\n\n  $scope.items = [];\n  for (var i = 0; i < 20; i++) {\n    $scope.items.push('Item ' + i);\n  }\n});"
+    "content": "angular.module('footerBarSimple', ['ionic'])\n.controller('FooterBarSimpleCtrl', function($scope) {\n  $scope.data = {\n    isSubfooter: false,\n    isShown: true\n  };\n\n  $scope.items = [];\n  for (var i = 0; i < 20; i++) {\n    $scope.items.push('Item ' + i);\n  }\n});\n"
   },
   "html": {
     "path": "nightly/directive/ionFooterBar/simple/html.html",
@@ -40,7 +40,7 @@ angular.module('footerBarSimple'
     }, document.querySelector('.demo-footer'));
 
     $scope.demoScratch = function(demo) {
-      var form = angular.element('<form method="POST" action="http://scratch.ionicsdk.com/embed">');
+      var form = angular.element('<form method="POST" action="http://scratch.ionicsdk.com/embed" target="_blank">');
 
       var htmlInput = angular.element('<textarea type="text" name="html">')
       .val(['<html ng-app="footerBarSimple">',
@@ -69,10 +69,6 @@ angular.module('footerBarSimple'
 
            document.body.appendChild(form[0]);
            form[0].submit();
-
-           $ionicLoading.show({
-             template: 'Opening in Scratchpad...'
-           });
     };
     
 })

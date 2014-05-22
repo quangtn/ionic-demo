@@ -7,7 +7,7 @@ var DEMO;
   "href": "/nightly/directive/ionTabs/navigation",
   "javascript": {
     "path": "nightly/directive/ionTabs/navigation/javascript.js",
-    "content": "angular.module('tabsAndNavigation', ['ionic'])\n.config(function ($stateProvider, $urlRouterProvider) {\n\n  $stateProvider\n    .state('tabs', {\n      url: \"/tab\",\n      abstract: true,\n      templateUrl: \"tabs.html\"\n    })\n    .state('tabs.home', {\n      url: \"/home\",\n      views: {\n        'home-tab': {\n          templateUrl: \"home.html\",\n          controller: 'HomeTabCtrl'\n        }\n      }\n    })\n    .state('tabs.facts', {\n      url: \"/facts\",\n      views: {\n        'home-tab': {\n          templateUrl: \"facts.html\"\n        }\n      }\n    })\n    .state('tabs.facts2', {\n      url: \"/facts2\",\n      views: {\n        'home-tab': {\n          templateUrl: \"facts2.html\"\n        }\n      }\n    })\n    .state('tabs.about', {\n      url: \"/about\",\n      views: {\n        'about-tab': {\n          templateUrl: \"about.html\"\n        }\n      }\n    })\n    .state('tabs.navstack', {\n      url: \"/navstack\",\n      views: {\n        'about-tab': {\n          templateUrl: \"nav-stack.html\"\n        }\n      }\n    })\n    .state('tabs.contact', {\n      url: \"/contact\",\n      views: {\n        'contact-tab': {\n          templateUrl: \"contact.html\"\n        }\n      }\n    });\n\n\n  $urlRouterProvider.otherwise(\"/tab/home\");\n\n})\n\n.controller('HomeTabCtrl', function ($scope) {\n  console.log('We have arrived at HomeTabCtrl.');\n});"
+    "content": "angular.module('tabsAndNavigation', ['ionic'])\n.config(function ($stateProvider, $urlRouterProvider) {\n\n  $stateProvider\n    .state('tabs', {\n      url: \"/tab\",\n      abstract: true,\n      templateUrl: \"tabs.html\"\n    })\n    .state('tabs.home', {\n      url: \"/home\",\n      views: {\n        'home-tab': {\n          templateUrl: \"home.html\",\n          controller: 'HomeTabCtrl'\n        }\n      }\n    })\n    .state('tabs.facts', {\n      url: \"/facts\",\n      views: {\n        'home-tab': {\n          templateUrl: \"facts.html\"\n        }\n      }\n    })\n    .state('tabs.facts2', {\n      url: \"/facts2\",\n      views: {\n        'home-tab': {\n          templateUrl: \"facts2.html\"\n        }\n      }\n    })\n    .state('tabs.about', {\n      url: \"/about\",\n      views: {\n        'about-tab': {\n          templateUrl: \"about.html\"\n        }\n      }\n    })\n    .state('tabs.navstack', {\n      url: \"/navstack\",\n      views: {\n        'about-tab': {\n          templateUrl: \"nav-stack.html\"\n        }\n      }\n    })\n    .state('tabs.contact', {\n      url: \"/contact\",\n      views: {\n        'contact-tab': {\n          templateUrl: \"contact.html\"\n        }\n      }\n    });\n\n\n  $urlRouterProvider.otherwise(\"/tab/home\");\n\n})\n\n.controller('HomeTabCtrl', function ($scope) {\n  console.log('We have arrived at HomeTabCtrl.');\n});\n"
   },
   "html": {
     "path": "nightly/directive/ionTabs/navigation/html.html",
@@ -40,7 +40,7 @@ angular.module('tabsAndNavigation'
     }, document.querySelector('.demo-footer'));
 
     $scope.demoScratch = function(demo) {
-      var form = angular.element('<form method="POST" action="http://scratch.ionicsdk.com/embed">');
+      var form = angular.element('<form method="POST" action="http://scratch.ionicsdk.com/embed" target="_blank">');
 
       var htmlInput = angular.element('<textarea type="text" name="html">')
       .val(['<html ng-app="tabsAndNavigation">',
@@ -69,10 +69,6 @@ angular.module('tabsAndNavigation'
 
            document.body.appendChild(form[0]);
            form[0].submit();
-
-           $ionicLoading.show({
-             template: 'Opening in Scratchpad...'
-           });
     };
     
 })

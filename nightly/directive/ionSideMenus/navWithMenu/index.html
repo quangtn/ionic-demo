@@ -1,16 +1,14 @@
 <!doctype html>
-<html ng-app="listAnimated" ng-controller="IonicDemoCtrl">
+<html ng-app="sideMenuWithNav" ng-controller="IonicDemoCtrl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 <link rel="stylesheet" href="http://code.ionicframework.com/nightly/css/ionic.min.css">
 
-<link rel="stylesheet" href="/nightly/directive/ionList/animated/css.css">
-
 <script src="http://code.ionicframework.com/nightly/js/ionic.bundle.min.js"></script>
 <script src="/nightly/demo-list.js"></script>
 
-<script src="/nightly/directive/ionList/animated/javascript.js"></script>
+<script src="/nightly/directive/ionSideMenus/navWithMenu/javascript.js"></script>
 
 <script src="demo.js"></script>
 </head>
@@ -20,32 +18,85 @@
 
 <div class="demo-content-pane">
 
-  <div ng-controller="AnimatedListCtrl">
-  <ion-header-bar class="bar-positive">
-    <h1 class="title">Animated List</h1>
-  </ion-header-bar>
-  <ion-content>
-    <ion-list show-delete="showDelete">
+  <ion-nav-view>
+</ion-nav-view>
 
-      <ion-item class="animated-item"
-                ng-repeat="item in items">
-        {{item}}
-        <div class="item-note">
-          <a class="button button-small"
-             ng-click="addItem($index)">
-             Add
-          </a>
-          <a class="button button-small"
-             ng-click="items.splice($index, 1)">
-            Remove
-          </a>
-        </div>
-      </ion-item>
+<script type="text/ng-template" id="templates/menu.html">
+  <ion-side-menus>
 
-    </ion-list>
-  </ion-content>
-</div>
+    <ion-pane ion-side-menu-content>
+      <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+        <ion-nav-back-button class="button-clear"><i class="icon ion-chevron-left"></i> Back</ion-nav-back-button>
+      </ion-nav-bar>
+      <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+    </ion-pane>
 
+    <ion-side-menu side="left">
+      <header class="bar bar-header bar-stable">
+        <h1 class="title">Left</h1>
+      </header>
+      <ion-content class="has-header">
+        <ion-list>
+          <ion-item nav-clear menu-close href="#/app/search">
+            Search
+          </ion-item>
+          <ion-item nav-clear menu-close href="#/app/browse">
+            Browse
+          </ion-item>
+          <ion-item nav-clear menu-close href="#/app/playlists">
+            Playlists
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-side-menu>
+
+  </ion-side-menus>
+</script>
+
+<script type="text/ng-template" id="templates/browse.html">
+  <ion-view title="Browse">
+    <ion-nav-buttons side="left">
+      <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+      <h1>Browse</h1>
+    </ion-content>
+  </ion-view>
+</script>
+
+<script type="text/ng-template" id="templates/playlist.html">
+  <ion-view title="Playlist">
+    <ion-content class="has-header">
+      <h1>Playlist</h1>
+    </ion-content>
+  </ion-view>
+</script>
+
+<script type="text/ng-template" id="templates/playlists.html">
+  <ion-view title="Playlists">
+    <ion-nav-buttons side="left">
+      <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+      <ion-list>
+        <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
+          {{playlist.title}}
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-view>
+</script>
+
+<script type="text/ng-template" id="templates/search.html">
+  <ion-view title="Search">
+    <ion-nav-buttons side="left">
+      <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+      <h1>Search</h1>
+    </ion-content>
+  </ion-view>
+</script>
 
 </div>
 <div class="bar bar-footer bar-light demo-footer" ng-click="$demoModal.show()">

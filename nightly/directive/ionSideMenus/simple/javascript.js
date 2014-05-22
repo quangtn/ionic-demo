@@ -6,3 +6,4 @@ app.controller('SideMenusSimpleCtrl', function($scope, $ionicSideMenuDelegate) {
   };
 
 });
+

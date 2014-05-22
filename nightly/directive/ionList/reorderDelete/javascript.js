@@ -31,3 +31,4 @@ angular.module('listEverything', ['ionic'])
     $scope.items.splice(toIndex, 0, item)
   };
 });
+

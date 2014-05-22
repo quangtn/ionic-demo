@@ -9,3 +9,4 @@ angular.module('headerBarSimple', ['ionic'])
     $scope.items.push('Item ' + i);
   }
 });
+

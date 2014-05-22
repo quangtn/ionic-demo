@@ -65,3 +65,4 @@ angular.module('tabsAndNavigation', ['ionic'])
 .controller('HomeTabCtrl', function ($scope) {
   console.log('We have arrived at HomeTabCtrl.');
 });
+

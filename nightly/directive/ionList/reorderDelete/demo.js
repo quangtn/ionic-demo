@@ -7,7 +7,7 @@ var DEMO;
   "href": "/nightly/directive/ionList/reorderDelete",
   "javascript": {
     "path": "nightly/directive/ionList/reorderDelete/javascript.js",
-    "content": "angular.module('listEverything', ['ionic'])\n.controller('ListCtrl', function($scope, $ionicPopup) {\n  $scope.data = {\n    showReorder: false,\n    showDelete: false\n  };\n\n  $scope.items = [];\n  for (var i = 0; i < 20; i++) {\n    $scope.items.push(i);\n  }\n\n  $scope.toggleDelete = function() {\n    $scope.data.showReorder = false;\n    $scope.data.showDelete = !$scope.data.showDelete;\n  };\n  $scope.toggleReorder = function() {\n    $scope.data.showDelete = false;\n    $scope.data.showReorder = !$scope.data.showReorder;\n  };\n\n  $scope.share = function(item) {\n    alert('Sharing ' + item);\n  };\n  $scope.edit = function(item) {\n    alert('Editing ' + item);\n  };\n\n  $scope.reorderItem = function(item, fromIndex, toIndex) {\n    $scope.items.splice(fromIndex, 1)\n    $scope.items.splice(toIndex, 0, item)\n  };\n});"
+    "content": "angular.module('listEverything', ['ionic'])\n.controller('ListCtrl', function($scope, $ionicPopup) {\n  $scope.data = {\n    showReorder: false,\n    showDelete: false\n  };\n\n  $scope.items = [];\n  for (var i = 0; i < 20; i++) {\n    $scope.items.push(i);\n  }\n\n  $scope.toggleDelete = function() {\n    $scope.data.showReorder = false;\n    $scope.data.showDelete = !$scope.data.showDelete;\n  };\n  $scope.toggleReorder = function() {\n    $scope.data.showDelete = false;\n    $scope.data.showReorder = !$scope.data.showReorder;\n  };\n\n  $scope.share = function(item) {\n    alert('Sharing ' + item);\n  };\n  $scope.edit = function(item) {\n    alert('Editing ' + item);\n  };\n\n  $scope.reorderItem = function(item, fromIndex, toIndex) {\n    $scope.items.splice(fromIndex, 1)\n    $scope.items.splice(toIndex, 0, item)\n  };\n});\n"
   },
   "html": {
     "path": "nightly/directive/ionList/reorderDelete/html.html",
@@ -40,7 +40,7 @@ angular.module('listEverything'
     }, document.querySelector('.demo-footer'));
 
     $scope.demoScratch = function(demo) {
-      var form = angular.element('<form method="POST" action="http://scratch.ionicsdk.com/embed">');
+      var form = angular.element('<form method="POST" action="http://scratch.ionicsdk.com/embed" target="_blank">');
 
       var htmlInput = angular.element('<textarea type="text" name="html">')
       .val(['<html ng-app="listEverything">',
@@ -69,10 +69,6 @@ angular.module('listEverything'
 
            document.body.appendChild(form[0]);
            form[0].submit();
-
-           $ionicLoading.show({
-             template: 'Opening in Scratchpad...'
-           });
     };
     
 })
