@@ -162,6 +162,20 @@ var DEMOS = [
     }
   },
   {
+    "module": "actionSheetSimple",
+    "name": "simple",
+    "docName": "$ionicActionSheet",
+    "href": "/nightly/service/$ionicActionSheet/simple",
+    "javascript": {
+      "path": "nightly/service/$ionicActionSheet/simple/javascript.js",
+      "content": "angular.module('actionSheetSimple', ['ionic'])\n.controller('ActionSheetCtrl', function($scope, $ionicActionSheet) {\n  $scope.messages = [];\n  $scope.takeAction = function() {\n    $ionicActionSheet.show({\n      buttons: [\n        { text: 'Share <i class=\"icon ion-share\">' },\n        { text: 'Edit <i class=\"icon ion-edit\">' }\n      ],\n      destructiveText: 'Delete <i class=\"icon ion-trash-b\">',\n      titleText: 'Modify your album',\n      cancelText: 'Cancel',\n      cancel: function() {\n        $scope.message('Cancel');\n        return true;\n      },\n      buttonClicked: function(index) {\n        $scope.message(index === 0 ? 'Share' : 'Edit');\n        return true;\n      },\n      destructiveButtonClicked: function() {\n        $scope.message('Delete');\n        return true;\n      }\n    });\n  };\n  $scope.message = function(msg) {\n    $scope.messages.unshift({\n      text: 'User pressed ' + msg\n    });\n  };\n\n});\n"
+    },
+    "html": {
+      "path": "nightly/service/$ionicActionSheet/simple/html.html",
+      "content": "<ion-header-bar class=\"bar-positive\">\n  <h1 class=\"title\">Action</h1>\n</ion-header-bar>\n<ion-content ng-controller=\"ActionSheetCtrl\" class=\"padding\">\n  <div class=\"button button-assertive button-block\" ng-click=\"takeAction()\">\n    Take Action!\n  </div>\n  <div class=\"card\" ng-show=\"messages.length\">\n    <div class=\"item item-divider\">\n      User Log\n    </div>\n    <div class=\"item item-text-wrap\">\n      <div ng-repeat=\"message in messages\">\n        {{message.text}}\n      </div>\n    </div> \n  </div>\n</ion-content>"
+    }
+  },
+  {
     "module": "loadingThemAll",
     "name": "loadThemAll",
     "docName": "$ionicLoading",
@@ -186,7 +200,7 @@ var DEMOS = [
     },
     "html": {
       "path": "nightly/service/$ionicPopup/simple/html.html",
-      "content": "<ion-content ng-controller=\"PopupCtrl\">\n  <button class=\"button button-dark\" ng-click=\"showPopup()\">Generic</button>\n  <button class=\"button button-primary\" ng-click=\"showConfirm()\">Confirm</button>\n  <button class=\"button button-balanced\" ng-click=\"showPrompt()\">Prompt</button>\n  <button class=\"button button-balanced\" ng-click=\"showPasswordPrompt()\">Password Prompt</button>\n  <button class=\"button button-positive\" ng-click=\"showAlert()\">Alert</button>\n  <div class=\"list\">\n    <a class=\"item\" href=\"#\" \n      ng-repeat=\"item in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]\">\n      Item {{item}}\n    </a>\n  </div>\n</ion-content>\n\n<script id=\"popup-template.html\" type=\"text/ng-template\">\n  <input ng-model=\"data.wifi\" type=\"text\" placeholder=\"Password\">\n</script>"
+      "content": "<ion-header-bar class=\"bar-positive\">\n  <h1 class=\"title\">Popups</h1>\n</ion-header-bar>\n<ion-content ng-controller=\"PopupCtrl\">\n  <button class=\"button button-dark\" ng-click=\"showPopup()\">Generic</button>\n  <button class=\"button button-primary\" ng-click=\"showConfirm()\">Confirm</button>\n  <button class=\"button button-balanced\" ng-click=\"showPrompt()\">Prompt</button>\n  <button class=\"button button-balanced\" ng-click=\"showPasswordPrompt()\">Password Prompt</button>\n  <button class=\"button button-positive\" ng-click=\"showAlert()\">Alert</button>\n  <div class=\"list\">\n    <a class=\"item\" href=\"#\"\n      ng-repeat=\"item in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]\">\n      Item {{item}}\n    </a>\n  </div>\n</ion-content>\n\n<script id=\"popup-template.html\" type=\"text/ng-template\">\n  <input ng-model=\"data.wifi\" type=\"text\" placeholder=\"Password\">\n</script>"
     }
   }
 ];

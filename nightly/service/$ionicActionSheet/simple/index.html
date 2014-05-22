@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="popupSimple" ng-controller="IonicDemoCtrl">
+<html ng-app="actionSheetSimple" ng-controller="IonicDemoCtrl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -8,7 +8,7 @@
 <script src="http://code.ionicframework.com/nightly/js/ionic.bundle.min.js"></script>
 <script src="/nightly/demo-list.js"></script>
 
-<script src="/nightly/service/$ionicPopup/simple/javascript.js"></script>
+<script src="/nightly/service/$ionicActionSheet/simple/javascript.js"></script>
 
 <script src="demo.js"></script>
 </head>
@@ -19,25 +19,23 @@
 <div class="demo-content-pane">
 
   <ion-header-bar class="bar-positive">
-  <h1 class="title">Popups</h1>
+  <h1 class="title">Action</h1>
 </ion-header-bar>
-<ion-content ng-controller="PopupCtrl">
-  <button class="button button-dark" ng-click="showPopup()">Generic</button>
-  <button class="button button-primary" ng-click="showConfirm()">Confirm</button>
-  <button class="button button-balanced" ng-click="showPrompt()">Prompt</button>
-  <button class="button button-balanced" ng-click="showPasswordPrompt()">Password Prompt</button>
-  <button class="button button-positive" ng-click="showAlert()">Alert</button>
-  <div class="list">
-    <a class="item" href="#"
-      ng-repeat="item in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]">
-      Item {{item}}
-    </a>
+<ion-content ng-controller="ActionSheetCtrl" class="padding">
+  <div class="button button-assertive button-block" ng-click="takeAction()">
+    Take Action!
+  </div>
+  <div class="card" ng-show="messages.length">
+    <div class="item item-divider">
+      User Log
+    </div>
+    <div class="item item-text-wrap">
+      <div ng-repeat="message in messages">
+        {{message.text}}
+      </div>
+    </div> 
   </div>
 </ion-content>
-
-<script id="popup-template.html" type="text/ng-template">
-  <input ng-model="data.wifi" type="text" placeholder="Password">
-</script>
 
 </div>
 <div class="bar bar-footer bar-light demo-footer" ng-click="$demoModal.show()">
