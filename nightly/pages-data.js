@@ -283,6 +283,42 @@ var DEMOS = [
     "files": {
       "html": [
         {
+          "name": "chooseOne",
+          "component": "ionRadio",
+          "id": "ionRadio-chooseOne",
+          "fileType": ".html",
+          "fileName": "index.html",
+          "contents": "\n<ion-header-bar class=\"bar-positive\">\n  <h1 class=\"title\">Radios</h1>\n</ion-header-bar>\n<ion-content ng-controller=\"ChooseOneCtrl\">\n  <h1>\n    Your Choice: <span class=\"assertive\">{{choice}}</span> \n  </h1>\n  <ion-radio ng-model=\"choice\" ng-value=\"one\">One</ion-radio>\n  <ion-radio ng-model=\"choice\" ng-value=\"two\">Two</ion-radio>\n  <ion-radio ng-model=\"choice\" ng-value=\"three\">Three</ion-radio>\n  <ion-radio ng-model=\"choice\" ng-value=\"four\">Four</ion-radio>\n  <ion-radio ng-model=\"choice\" ng-value=\"five\">Five</ion-radio>\n</ion-content>",
+          "extension": "html",
+          "template": "asset.contents.template",
+          "outputPath": "nightly/ionRadio/chooseOne/index.html",
+          "renderedContent": "\n<ion-header-bar class=\"bar-positive\">\n  <h1 class=\"title\">Radios</h1>\n</ion-header-bar>\n<ion-content ng-controller=\"ChooseOneCtrl\">\n  <h1>\n    Your Choice: <span class=\"assertive\">{{choice}}</span> \n  </h1>\n  <ion-radio ng-model=\"choice\" ng-value=\"one\">One</ion-radio>\n  <ion-radio ng-model=\"choice\" ng-value=\"two\">Two</ion-radio>\n  <ion-radio ng-model=\"choice\" ng-value=\"three\">Three</ion-radio>\n  <ion-radio ng-model=\"choice\" ng-value=\"four\">Four</ion-radio>\n  <ion-radio ng-model=\"choice\" ng-value=\"five\">Five</ion-radio>\n</ion-content>\n"
+        }
+      ],
+      "js": [
+        {
+          "name": "chooseOne",
+          "component": "ionRadio",
+          "id": "ionRadio-chooseOne",
+          "fileType": ".js",
+          "fileName": "index.js",
+          "contents": "\nangular.module('chooseOne', ['ionic'])\n.controller('ChooseOneCtrl', function($scope) {\n  $scope.choice = 'two';\n});",
+          "extension": "js",
+          "template": "asset.contents.template",
+          "outputPath": "nightly/ionRadio/chooseOne/index.js",
+          "renderedContent": "\nangular.module('chooseOne', ['ionic'])\n.controller('ChooseOneCtrl', function($scope) {\n  $scope.choice = 'two';\n});\n"
+        }
+      ]
+    },
+    "id": "ionRadio-chooseOne",
+    "name": "chooseOne",
+    "component": "ionRadio",
+    "href": "/nightly/ionRadio/chooseOne/"
+  },
+  {
+    "files": {
+      "html": [
+        {
           "name": "refreshList",
           "component": "ionRefresher",
           "id": "ionRefresher-refreshList",
