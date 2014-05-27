@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="demoApp" ng-controller="IonicDemoCtrl">
+<html ng-app="reorderDelete" ng-controller="IonicDemoCtrl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -9,15 +9,69 @@
 
 
 
+  <script src="index.js"></script>
+
 <script src="index-ionic-demo-app.js"></script>
 </head>
 <body>
 
 
 
-<div class="pane">
-  <div ng-include="'demo-list.html'">
+<div class="demo-content-pane">
+  
+  
+<div ng-controller="ListCtrl">
+  <ion-header-bar class="bar-positive">
+    <a class="button" ng-click="toggleDelete()">
+      Delete
+    </a>
+    <h1 class="title">List</h1>
+    <a class="button" ng-click="toggleReorder()">
+      Reorder
+    </a>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list show-delete="data.showDelete"
+              show-reorder="data.showReorder">
+      <ion-item ng-repeat="item in items"
+                class="item-thumbnail-left">
+
+        <img ng-src="http://placekitten.com/{{60+$index}}/{{61+2*$index}}">
+        <h2>Item {{item}}</h2>
+        <p>Here's an item description.</p>
+        <ion-option-button class="button-positive"
+                           ng-click="share(item)">
+          Share
+        </ion-option-button>
+        <ion-option-button class="button-info"
+                           ng-click="edit(item)">
+          Edit
+        </ion-option-button>
+        <ion-delete-button class="ion-minus-circled"
+                           ng-click="items.splice($index, 1)">
+        </ion-delete-button>
+        <ion-reorder-button class="ion-navicon"
+                            on-reorder="reorderItem(item, $fromIndex, $toIndex)">
+        </ion-reorder-button>
+
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</div>
+  
+</div>
+<div class="bar bar-footer bar-light demo-footer" ng-click="$demoModal.show()">
+  <div class="demo-footer-icon" ng-hide="$demoModal.isShown()">
+    <i class="icon ion-chevron-up"></i>
   </div>
+  <h1 class="title" style="right:auto;"
+      ng-bind="$demo.component + ': ' + ($demo.name | humanize)">
+  </h1>
+  <div class="buttons right-buttons">
+    <a class="button" ng-click="demoScratch($demo); $event.stopPropagation()">
+      <i class="icon ion-code"></i>
+      Source
+    </a>
 </div>
 
 
