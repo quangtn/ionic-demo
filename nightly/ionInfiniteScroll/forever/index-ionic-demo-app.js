@@ -29,6 +29,21 @@ var DEMO;
         "outputPath": "nightly/ionInfiniteScroll/forever/index.js",
         "renderedContent": "\nangular.module('forever', ['ionic'])\n.controller('ForeverCtrl', function($scope, $timeout) {\n  $scope.items = [];\n  for (var i = 0; i < 20; i++) {\n    $scope.items.push(i);\n  }\n\n  //Load more after 1 second delay\n  $scope.loadMoreItems = function() {\n     var i = $scope.items.length;\n     var j = $scope.items.length + 5;\n     for (; i < j; i++) {\n       $scope.items.push('Item ' + i);\n     }\n     $scope.$broadcast('scroll.infiniteScrollComplete');\n  };\n});\n"
       }
+    ],
+    "scenario.js": [
+      {
+        "name": "forever",
+        "component": "ionInfiniteScroll",
+        "id": "ionInfiniteScroll-forever",
+        "fileType": ".scenario.js",
+        "fileName": "test.scenario.js",
+        "contents": "",
+        "extension": "scenario.js",
+        "template": "scenario.template.js",
+        "outputPath": "nightly/ionInfiniteScroll/forever/test.scenario.js",
+        "url": "http://localhost:8765/nightly/ionInfiniteScroll/forever/",
+        "renderedContent": "describe('ionInfiniteScroll-forever', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionInfiniteScroll/forever/');\n});\n\n\n\n});\n"
+      }
     ]
   },
   "id": "ionInfiniteScroll-forever",

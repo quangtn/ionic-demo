@@ -29,6 +29,21 @@ var DEMO;
         "outputPath": "nightly/$ionicActionSheet/takeAction/index.js",
         "renderedContent": "\nangular.module('takeAction', ['ionic'])\n.controller('ActionSheetCtrl', function($scope, $ionicActionSheet) {\n  $scope.messages = [];\n  $scope.takeAction = function() {\n    $ionicActionSheet.show({\n      buttons: [\n        { text: 'Share <i class=\"icon ion-share\">' },\n        { text: 'Edit <i class=\"icon ion-edit\">' }\n      ],\n      destructiveText: 'Delete <i class=\"icon ion-trash-b\">',\n      titleText: 'Modify your album',\n      cancelText: 'Cancel',\n      cancel: function() {\n        $scope.message('Cancel');\n        return true;\n      },\n      buttonClicked: function(index) {\n        $scope.message(index === 0 ? 'Share' : 'Edit');\n        return true;\n      },\n      destructiveButtonClicked: function() {\n        $scope.message('Delete');\n        return true;\n      }\n    });\n  };\n  $scope.message = function(msg) {\n    $scope.messages.unshift({\n      text: 'User pressed ' + msg\n    });\n  };\n});\n"
       }
+    ],
+    "scenario.js": [
+      {
+        "name": "takeAction",
+        "component": "$ionicActionSheet",
+        "id": "$ionicActionSheet-takeAction",
+        "fileType": ".scenario.js",
+        "fileName": "test.scenario.js",
+        "contents": "\n\nit('should open up actionsheet', function(){\n  var ele = element(by.css('.button'));\n  ele.click();\n});\n\nit('should close when clicking backdrop', function(){\n  var ele = element(by.css('.action-sheet-backdrop'));\n  ele.click();\n});\n\nit('should open up actionsheet again', function(){\n  var ele = element(by.css('.button'));\n  ele.click();\n});\n\nit('should click the share button', function(){\n  var ele = element.all(by.css('.action-sheet-group .button'));\n  ele.get(0).click();\n});",
+        "extension": "scenario.js",
+        "template": "scenario.template.js",
+        "outputPath": "nightly/$ionicActionSheet/takeAction/test.scenario.js",
+        "url": "http://localhost:8765/nightly/$ionicActionSheet/takeAction/",
+        "renderedContent": "describe('$ionicActionSheet-takeAction', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/$ionicActionSheet/takeAction/');\n});\n\n\n\nit('should open up actionsheet', function(){\n  var ele = element(by.css('.button'));\n  ele.click();\n});\n\nit('should close when clicking backdrop', function(){\n  var ele = element(by.css('.action-sheet-backdrop'));\n  ele.click();\n});\n\nit('should open up actionsheet again', function(){\n  var ele = element(by.css('.button'));\n  ele.click();\n});\n\nit('should click the share button', function(){\n  var ele = element.all(by.css('.action-sheet-group .button'));\n  ele.get(0).click();\n});\n\n});\n"
+      }
     ]
   },
   "id": "$ionicActionSheet-takeAction",

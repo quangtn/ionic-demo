@@ -29,6 +29,21 @@ var DEMO;
         "outputPath": "nightly/ionRadio/chooseOne/index.js",
         "renderedContent": "\nangular.module('chooseOne', ['ionic'])\n.controller('ChooseOneCtrl', function($scope) {\n  $scope.choice = 'two';\n});\n"
       }
+    ],
+    "scenario.js": [
+      {
+        "name": "chooseOne",
+        "component": "ionRadio",
+        "id": "ionRadio-chooseOne",
+        "fileType": ".scenario.js",
+        "fileName": "test.scenario.js",
+        "contents": "",
+        "extension": "scenario.js",
+        "template": "scenario.template.js",
+        "outputPath": "nightly/ionRadio/chooseOne/test.scenario.js",
+        "url": "http://localhost:8765/nightly/ionRadio/chooseOne/",
+        "renderedContent": "describe('ionRadio-chooseOne', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionRadio/chooseOne/');\n});\n\n\n\n});\n"
+      }
     ]
   },
   "id": "ionRadio-chooseOne",

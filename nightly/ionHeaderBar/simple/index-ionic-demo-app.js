@@ -29,6 +29,21 @@ var DEMO;
         "outputPath": "nightly/ionHeaderBar/simple/index.js",
         "renderedContent": "\nangular.module('simple', ['ionic'])\n.controller('HeaderBarSimpleCtrl', function($scope) {\n  $scope.data = {\n    isSubheader: false,\n    isShown: true\n  };\n  $scope.items = [];\n  for (var i = 0; i < 20; i++) {\n    $scope.items.push('Item ' + i);\n  }\n});\n"
       }
+    ],
+    "scenario.js": [
+      {
+        "name": "simple",
+        "component": "ionHeaderBar",
+        "id": "ionHeaderBar-simple",
+        "fileType": ".scenario.js",
+        "fileName": "test.scenario.js",
+        "contents": "\n\nit('should show subheader', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(0).click();\n});\n\nit('should hide subheader', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(0).click();\n});\n\nit('should hide header', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(1).click();\n});\n\nit('should show header', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(1).click();\n});",
+        "extension": "scenario.js",
+        "template": "scenario.template.js",
+        "outputPath": "nightly/ionHeaderBar/simple/test.scenario.js",
+        "url": "http://localhost:8765/nightly/ionHeaderBar/simple/",
+        "renderedContent": "describe('ionHeaderBar-simple', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionHeaderBar/simple/');\n});\n\n\n\nit('should show subheader', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(0).click();\n});\n\nit('should hide subheader', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(0).click();\n});\n\nit('should hide header', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(1).click();\n});\n\nit('should show header', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(1).click();\n});\n\n});\n"
+      }
     ]
   },
   "id": "ionHeaderBar-simple",

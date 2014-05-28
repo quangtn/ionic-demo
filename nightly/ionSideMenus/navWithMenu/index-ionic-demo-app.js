@@ -29,6 +29,21 @@ var DEMO;
         "outputPath": "nightly/ionSideMenus/navWithMenu/index.js",
         "renderedContent": "\nangular.module('navWithMenu', ['ionic'])\n.config(function($stateProvider, $urlRouterProvider) {\n  $stateProvider\n\n    .state('app', {\n      url: \"/app\",\n      abstract: true,\n      templateUrl: \"templates/menu.html\",\n      controller: 'AppCtrl'\n    })\n\n    .state('app.search', {\n      url: \"/search\",\n      views: {\n        'menuContent' :{\n          templateUrl: \"templates/search.html\"\n        }\n      }\n    })\n\n    .state('app.browse', {\n      url: \"/browse\",\n      views: {\n        'menuContent' :{\n          templateUrl: \"templates/browse.html\"\n        }\n      }\n    })\n    .state('app.playlists', {\n      url: \"/playlists\",\n      views: {\n        'menuContent' :{\n          templateUrl: \"templates/playlists.html\",\n          controller: 'PlaylistsCtrl'\n        }\n      }\n    })\n\n    .state('app.single', {\n      url: \"/playlists/:playlistId\",\n      views: {\n        'menuContent' :{\n          templateUrl: \"templates/playlist.html\",\n          controller: 'PlaylistCtrl'\n        }\n      }\n    });\n  // if none of the above states are matched, use this as the fallback\n  $urlRouterProvider.otherwise('/app/playlists');\n})\n\n.controller('AppCtrl', function($scope) {\n})\n\n.controller('PlaylistsCtrl', function($scope) {\n  $scope.playlists = [\n    { title: 'Reggae', id: 1 },\n    { title: 'Chill', id: 2 },\n    { title: 'Dubstep', id: 3 },\n    { title: 'Indie', id: 4 },\n    { title: 'Rap', id: 5 },\n    { title: 'Cowbell', id: 6 }\n  ];\n})\n\n.controller('PlaylistCtrl', function($scope, $stateParams) {\n})\n"
       }
+    ],
+    "scenario.js": [
+      {
+        "name": "navWithMenu",
+        "component": "ionSideMenus",
+        "id": "ionSideMenus-navWithMenu",
+        "fileType": ".scenario.js",
+        "fileName": "test.scenario.js",
+        "contents": "\n\nit('should nav to Search from left menu', function(){\n  var ele = element.all(by.css('button[menu-toggle=\"left\"]'));\n  ele.get(0).click();\n\n  browser.sleep(500).then(function(){\n    var itemEle = element.all(by.css('ion-side-menu[side=\"left\"] a'));\n    itemEle.get(0).click();\n  });\n});\n\nit('should nav to Browse from left menu', function(){\n  var ele = element.all(by.css('button[menu-toggle=\"left\"]'));\n  ele.get(0).click();\n\n  browser.sleep(500).then(function(){\n    var itemEle = element.all(by.css('ion-side-menu[side=\"left\"] a'));\n    itemEle.get(1).click();\n  });\n});",
+        "extension": "scenario.js",
+        "template": "scenario.template.js",
+        "outputPath": "nightly/ionSideMenus/navWithMenu/test.scenario.js",
+        "url": "http://localhost:8765/nightly/ionSideMenus/navWithMenu/",
+        "renderedContent": "describe('ionSideMenus-navWithMenu', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionSideMenus/navWithMenu/');\n});\n\n\n\nit('should nav to Search from left menu', function(){\n  var ele = element.all(by.css('button[menu-toggle=\"left\"]'));\n  ele.get(0).click();\n\n  browser.sleep(500).then(function(){\n    var itemEle = element.all(by.css('ion-side-menu[side=\"left\"] a'));\n    itemEle.get(0).click();\n  });\n});\n\nit('should nav to Browse from left menu', function(){\n  var ele = element.all(by.css('button[menu-toggle=\"left\"]'));\n  ele.get(0).click();\n\n  browser.sleep(500).then(function(){\n    var itemEle = element.all(by.css('ion-side-menu[side=\"left\"] a'));\n    itemEle.get(1).click();\n  });\n});\n\n});\n"
+      }
     ]
   },
   "id": "ionSideMenus-navWithMenu",

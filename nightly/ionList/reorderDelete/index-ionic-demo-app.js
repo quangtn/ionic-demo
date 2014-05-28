@@ -29,6 +29,21 @@ var DEMO;
         "outputPath": "nightly/ionList/reorderDelete/index.js",
         "renderedContent": "\nangular.module('reorderDelete', ['ionic'])\n.controller('ListCtrl', function($scope, $ionicPopup) {\n  $scope.data = {\n    showReorder: false,\n    showDelete: false\n  };\n\n  $scope.items = [];\n  for (var i = 0; i < 20; i++) {\n    $scope.items.push(i);\n  }\n\n  $scope.toggleDelete = function() {\n    $scope.data.showReorder = false;\n    $scope.data.showDelete = !$scope.data.showDelete;\n  };\n  $scope.toggleReorder = function() {\n    $scope.data.showDelete = false;\n    $scope.data.showReorder = !$scope.data.showReorder;\n  };\n\n  $scope.share = function(item) {\n    alert('Sharing ' + item);\n  };\n  $scope.edit = function(item) {\n    alert('Editing ' + item);\n  };\n\n  $scope.reorderItem = function(item, fromIndex, toIndex) {\n    $scope.items.splice(fromIndex, 1)\n    $scope.items.splice(toIndex, 0, item)\n  };\n});\n"
       }
+    ],
+    "scenario.js": [
+      {
+        "name": "reorderDelete",
+        "component": "ionList",
+        "id": "ionList-reorderDelete",
+        "fileType": ".scenario.js",
+        "fileName": "test.scenario.js",
+        "contents": "\n\nit('should show reorder icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(1).click();\n});\n\nit('should hide reorder icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(1).click();\n});\n\nit('should show delete icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\nit('should hide delete icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});",
+        "extension": "scenario.js",
+        "template": "scenario.template.js",
+        "outputPath": "nightly/ionList/reorderDelete/test.scenario.js",
+        "url": "http://localhost:8765/nightly/ionList/reorderDelete/",
+        "renderedContent": "describe('ionList-reorderDelete', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionList/reorderDelete/');\n});\n\n\n\nit('should show reorder icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(1).click();\n});\n\nit('should hide reorder icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(1).click();\n});\n\nit('should show delete icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\nit('should hide delete icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\n});\n"
+      }
     ]
   },
   "id": "ionList-reorderDelete",

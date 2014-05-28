@@ -30,6 +30,21 @@ var DEMO;
         "renderedContent": "\nangular.module('appIntro', ['ionic'])\n\n.config(function ($stateProvider, $urlRouterProvider) {\n\n  $stateProvider\n    .state('intro', {\n      url: '/',\n      templateUrl: 'intro.html',\n      controller: 'IntroCtrl'\n    })\n    .state('main', {\n      url: '/main',\n      templateUrl: 'main.html',\n      controller: 'MainCtrl'\n    });\n\n  $urlRouterProvider.otherwise(\"/\");\n\n})\n\n.controller('IntroCtrl', function ($scope, $state, $ionicSlideBoxDelegate) {\n\n  // Called to navigate to the main app\n  $scope.startApp = function () {\n    $state.go('main');\n  };\n  $scope.next = function () {\n    $ionicSlideBoxDelegate.next();\n  };\n  $scope.previous = function () {\n    $ionicSlideBoxDelegate.previous();\n  };\n\n  // Called each time the slide changes\n  $scope.slideChanged = function (index) {\n    $scope.slideIndex = index;\n  };\n})\n\n.controller('MainCtrl', function ($scope, $state) {\n  $scope.toIntro = function () {\n    $state.go('intro');\n  };\n});\n"
       }
     ],
+    "scenario.js": [
+      {
+        "name": "appIntro",
+        "component": "ionSlideBox",
+        "id": "ionSlideBox-appIntro",
+        "fileType": ".scenario.js",
+        "fileName": "test.scenario.js",
+        "contents": "\nit('should go to slide 2', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should go to slide 1', function(){\n  var ele = element(by.css('.left-buttons .button'));\n  ele.click();\n});\n\nit('should go to slide 2', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should go to slide 3', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should go to main app', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should start over', function(){\n  var ele = element(by.css('ion-nav-view .button'));\n  ele.click();\n});",
+        "extension": "scenario.js",
+        "template": "scenario.template.js",
+        "outputPath": "nightly/ionSlideBox/appIntro/test.scenario.js",
+        "url": "http://localhost:8765/nightly/ionSlideBox/appIntro/",
+        "renderedContent": "describe('ionSlideBox-appIntro', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionSlideBox/appIntro/');\n});\n\n\nit('should go to slide 2', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should go to slide 1', function(){\n  var ele = element(by.css('.left-buttons .button'));\n  ele.click();\n});\n\nit('should go to slide 2', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should go to slide 3', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should go to main app', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should start over', function(){\n  var ele = element(by.css('ion-nav-view .button'));\n  ele.click();\n});\n\n});\n"
+      }
+    ],
     "css": [
       {
         "name": "appIntro",

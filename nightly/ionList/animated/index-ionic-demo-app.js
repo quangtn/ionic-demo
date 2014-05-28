@@ -30,6 +30,21 @@ var DEMO;
         "renderedContent": "\nangular.module('animated', ['ionic'])\n.controller('AnimatedListCtrl', function($scope, $timeout) {\n  var nextItem = 0;\n  $scope.items = [];\n  for (var i=0; i < 5; i++) {\n    $scope.items.push('Item ' + (nextItem++));\n  }\n\n  $scope.addItem = function(atIndex) {\n    $scope.items.splice(atIndex + 1, 0, 'Item ' + nextItem);\n    nextItem++;\n  };\n});\n"
       }
     ],
+    "scenario.js": [
+      {
+        "name": "animated",
+        "component": "ionList",
+        "id": "ionList-animated",
+        "fileType": ".scenario.js",
+        "fileName": "test.scenario.js",
+        "contents": "\n\nit('should add item below Item 0', function(){\n  var ele = element.all(by.css('.list .button'));\n  ele.get(0).click();\n});\n\nit('should remove Item 0', function(){\n  var ele = element.all(by.css('.list .button'));\n  ele.get(1).click();\n});",
+        "extension": "scenario.js",
+        "template": "scenario.template.js",
+        "outputPath": "nightly/ionList/animated/test.scenario.js",
+        "url": "http://localhost:8765/nightly/ionList/animated/",
+        "renderedContent": "describe('ionList-animated', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionList/animated/');\n});\n\n\n\nit('should add item below Item 0', function(){\n  var ele = element.all(by.css('.list .button'));\n  ele.get(0).click();\n});\n\nit('should remove Item 0', function(){\n  var ele = element.all(by.css('.list .button'));\n  ele.get(1).click();\n});\n\n});\n"
+      }
+    ],
     "css": [
       {
         "name": "animated",

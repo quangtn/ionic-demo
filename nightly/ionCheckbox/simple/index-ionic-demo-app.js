@@ -8,11 +8,11 @@ var DEMO;
         "component": "ionCheckbox",
         "id": "ionCheckbox-simple",
         "fileType": ".html",
-        "fileName": "simple.html",
+        "fileName": "index.html",
         "contents": "\n\n<ion-header-bar class=\"bar-positive\">\n  <h1 class=\"title\">\n    Checkbox: Simple Usage\n  </h1>\n</ion-header-bar>\n<ion-content ng-controller=\"CheckboxSimpleCtrl\" class=\"padding\">\n  <h4>Your pizza has {{toppings()}}!</h4>\n  <ion-checkbox ng-model=\"pizza.pepperoni\">\n    Pepperoni?\n  </ion-checkbox>\n  <ion-checkbox ng-model=\"pizza.sausage\">\n    Sausage?\n  </ion-checkbox>\n  <ion-checkbox ng-model=\"pizza.jalapenos\">\n    Jalapeno?\n  </ion-checkbox>\n  <ion-checkbox ng-model=\"pizza.anchovies\">\n    Anchovies?\n  </ion-checkbox>\n</ion-content>",
         "extension": "html",
         "template": "asset.contents.template",
-        "outputPath": "nightly/ionCheckbox/simple/simple.html",
+        "outputPath": "nightly/ionCheckbox/simple/index.html",
         "renderedContent": "\n\n<ion-header-bar class=\"bar-positive\">\n  <h1 class=\"title\">\n    Checkbox: Simple Usage\n  </h1>\n</ion-header-bar>\n<ion-content ng-controller=\"CheckboxSimpleCtrl\" class=\"padding\">\n  <h4>Your pizza has {{toppings()}}!</h4>\n  <ion-checkbox ng-model=\"pizza.pepperoni\">\n    Pepperoni?\n  </ion-checkbox>\n  <ion-checkbox ng-model=\"pizza.sausage\">\n    Sausage?\n  </ion-checkbox>\n  <ion-checkbox ng-model=\"pizza.jalapenos\">\n    Jalapeno?\n  </ion-checkbox>\n  <ion-checkbox ng-model=\"pizza.anchovies\">\n    Anchovies?\n  </ion-checkbox>\n</ion-content>\n"
       }
     ],
@@ -22,12 +22,27 @@ var DEMO;
         "component": "ionCheckbox",
         "id": "ionCheckbox-simple",
         "fileType": ".js",
-        "fileName": "simple.js",
+        "fileName": "index.js",
         "contents": "\n\nvar app = angular.module('simple', ['ionic']);\napp.controller('CheckboxSimpleCtrl', function($scope) {\n  $scope.pizza = {\n    pepperoni: true,\n    sausage: false,\n    anchovies: true,\n    jalapenos: false\n  };\n\n  $scope.toppings = function() {\n    var toppings = Object.keys($scope.pizza).filter(function(flavor) {\n      return $scope.pizza[flavor];\n    });\n    if (toppings.length > 1) {\n      toppings[toppings.length - 1] = 'and ' + toppings[toppings.length - 1];\n    }\n    if (toppings.length > 2) {\n      return toppings.join(', ');\n    } else if (toppings.length) {\n      return toppings.join(' ');\n    } else {\n      return 'nothing';\n    }\n  };\n});",
         "extension": "js",
         "template": "asset.contents.template",
-        "outputPath": "nightly/ionCheckbox/simple/simple.js",
+        "outputPath": "nightly/ionCheckbox/simple/index.js",
         "renderedContent": "\n\nvar app = angular.module('simple', ['ionic']);\napp.controller('CheckboxSimpleCtrl', function($scope) {\n  $scope.pizza = {\n    pepperoni: true,\n    sausage: false,\n    anchovies: true,\n    jalapenos: false\n  };\n\n  $scope.toppings = function() {\n    var toppings = Object.keys($scope.pizza).filter(function(flavor) {\n      return $scope.pizza[flavor];\n    });\n    if (toppings.length > 1) {\n      toppings[toppings.length - 1] = 'and ' + toppings[toppings.length - 1];\n    }\n    if (toppings.length > 2) {\n      return toppings.join(', ');\n    } else if (toppings.length) {\n      return toppings.join(' ');\n    } else {\n      return 'nothing';\n    }\n  };\n});\n"
+      }
+    ],
+    "scenario.js": [
+      {
+        "name": "simple",
+        "component": "ionCheckbox",
+        "id": "ionCheckbox-simple",
+        "fileType": ".scenario.js",
+        "fileName": "test.scenario.js",
+        "contents": "\n\nit('should uncheck 1st and check 2nd checkbox by clicking its label', function(){\n  var ele = element.all(by.css('label.item-checkbox'));\n  ele.get(0).click();\n  ele.get(1).click();\n});\n\nit('should check 1st and uncheck 2nd checkbox by clicking its label', function(){\n  var ele = element.all(by.css('label.item-checkbox'));\n  ele.get(0).click();\n  ele.get(1).click();\n});",
+        "extension": "scenario.js",
+        "template": "scenario.template.js",
+        "outputPath": "nightly/ionCheckbox/simple/test.scenario.js",
+        "url": "http://localhost:8765/nightly/ionCheckbox/simple/",
+        "renderedContent": "describe('ionCheckbox-simple', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionCheckbox/simple/');\n});\n\n\n\nit('should uncheck 1st and check 2nd checkbox by clicking its label', function(){\n  var ele = element.all(by.css('label.item-checkbox'));\n  ele.get(0).click();\n  ele.get(1).click();\n});\n\nit('should check 1st and uncheck 2nd checkbox by clicking its label', function(){\n  var ele = element.all(by.css('label.item-checkbox'));\n  ele.get(0).click();\n  ele.get(1).click();\n});\n\n});\n"
       }
     ]
   },

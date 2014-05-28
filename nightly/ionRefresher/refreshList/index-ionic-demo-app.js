@@ -29,6 +29,21 @@ var DEMO;
         "outputPath": "nightly/ionRefresher/refreshList/index.js",
         "renderedContent": "\nangular.module('refreshList', ['ionic'])\n.controller('RefresherCtrl', function($scope, $timeout) {\n  $scope.items = ['Item 1', 'Item 2', 'Item 3'];\n\n  $scope.doRefresh = function() {\n    $timeout(function() {\n      $scope.items.push('New Item ' + Math.floor(Math.random() * 1000) + 4);\n      $scope.items.push('New Item ' + Math.floor(Math.random() * 1000) + 4);\n      $scope.items.push('New Item ' + Math.floor(Math.random() * 1000) + 4);\n      $scope.items.push('New Item ' + Math.floor(Math.random() * 1000) + 4);\n      $scope.$broadcast('scroll.refreshComplete');\n    }, 1000);\n  };\n});\n"
       }
+    ],
+    "scenario.js": [
+      {
+        "name": "refreshList",
+        "component": "ionRefresher",
+        "id": "ionRefresher-refreshList",
+        "fileType": ".scenario.js",
+        "fileName": "test.scenario.js",
+        "contents": "",
+        "extension": "scenario.js",
+        "template": "scenario.template.js",
+        "outputPath": "nightly/ionRefresher/refreshList/test.scenario.js",
+        "url": "http://localhost:8765/nightly/ionRefresher/refreshList/",
+        "renderedContent": "describe('ionRefresher-refreshList', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionRefresher/refreshList/');\n});\n\n\n\n});\n"
+      }
     ]
   },
   "id": "ionRefresher-refreshList",
