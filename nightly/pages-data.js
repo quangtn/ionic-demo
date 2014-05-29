@@ -87,12 +87,12 @@ var DEMOS = [
           "id": "collectionRepeat-contacts",
           "fileType": ".scenario.js",
           "fileName": "test.scenario.js",
-          "contents": "\nit('should scroll to the bottom', function(){\n  var ele = element(by.css('.bar-header .button'));\n  ele.click();\n});\n\nit('should scroll to the top', function(){\n  var ele = element(by.css('.bar-header'));\n  ele.click();\n});\n\nit('should filter by juan', function(){\n  var ele = element(by.model('search'));\n  ele.sendKeys('juan');\n});\n\nit('should clear search', function(){\n  var ele = element(by.css('.bar-header .input-button'));\n  ele.click();\n});",
+          "contents": "\nit('should scroll to the bottom', function(){\n  var ele = element(by.css('.bar-header .button'));\n  ele.click();\n  browser.sleep(200);\n});\n\nit('should scroll to the top', function(){\n  var ele = element(by.css('.bar-header'));\n  ele.click();\n  browser.sleep(200);\n});\n\nit('should filter by juan', function(){\n  var ele = element(by.model('search'));\n  ele.sendKeys('juan');\n});\n\nit('should clear search', function(){\n  var ele = element(by.css('.bar-header .input-button'));\n  ele.click();\n});",
           "extension": "scenario.js",
           "template": "scenario.template.js",
           "outputPath": "nightly/collectionRepeat/contacts/test.scenario.js",
           "url": "http://localhost:8765/nightly/collectionRepeat/contacts/",
-          "renderedContent": "describe('collectionRepeat-contacts', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/collectionRepeat/contacts/');\n});\n\n\nit('should scroll to the bottom', function(){\n  var ele = element(by.css('.bar-header .button'));\n  ele.click();\n});\n\nit('should scroll to the top', function(){\n  var ele = element(by.css('.bar-header'));\n  ele.click();\n});\n\nit('should filter by juan', function(){\n  var ele = element(by.model('search'));\n  ele.sendKeys('juan');\n});\n\nit('should clear search', function(){\n  var ele = element(by.css('.bar-header .input-button'));\n  ele.click();\n});\n\n});\n"
+          "renderedContent": "describe('collectionRepeat-contacts', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/collectionRepeat/contacts/');\n});\n\n\nit('should scroll to the bottom', function(){\n  var ele = element(by.css('.bar-header .button'));\n  ele.click();\n  browser.sleep(200);\n});\n\nit('should scroll to the top', function(){\n  var ele = element(by.css('.bar-header'));\n  ele.click();\n  browser.sleep(200);\n});\n\nit('should filter by juan', function(){\n  var ele = element(by.model('search'));\n  ele.sendKeys('juan');\n});\n\nit('should clear search', function(){\n  var ele = element(by.css('.bar-header .input-button'));\n  ele.click();\n});\n\n});\n"
         }
       ],
       "css": [
