@@ -41,8 +41,8 @@ var DEMO;
         "extension": "scenario.js",
         "template": "scenario.template.js",
         "outputPath": "nightly/ionRadio/chooseOne/test.scenario.js",
-        "url": "http://localhost:8765/nightly/ionRadio/chooseOne/",
-        "renderedContent": "describe('ionRadio-chooseOne', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionRadio/chooseOne/');\n});\n\n\n\n});\n"
+        "url": "http://localhost:8876/nightly/ionRadio/chooseOne/",
+        "renderedContent": "describe('ionRadio-chooseOne', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionRadio/chooseOne/');\n});\n\n\n\n});\n"
       }
     ]
   },

@@ -41,8 +41,8 @@ var DEMO;
         "extension": "scenario.js",
         "template": "scenario.template.js",
         "outputPath": "nightly/ionInfiniteScroll/forever/test.scenario.js",
-        "url": "http://localhost:8765/nightly/ionInfiniteScroll/forever/",
-        "renderedContent": "describe('ionInfiniteScroll-forever', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionInfiniteScroll/forever/');\n});\n\n\n\n});\n"
+        "url": "http://localhost:8876/nightly/ionInfiniteScroll/forever/",
+        "renderedContent": "describe('ionInfiniteScroll-forever', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionInfiniteScroll/forever/');\n});\n\n\n\n});\n"
       }
     ]
   },

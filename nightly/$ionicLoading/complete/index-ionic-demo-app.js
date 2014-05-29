@@ -41,8 +41,8 @@ var DEMO;
         "extension": "scenario.js",
         "template": "scenario.template.js",
         "outputPath": "nightly/$ionicLoading/complete/test.scenario.js",
-        "url": "http://localhost:8765/nightly/$ionicLoading/complete/",
-        "renderedContent": "describe('$ionicLoading-complete', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/$ionicLoading/complete/');\n});\n\n\n\n});\n"
+        "url": "http://localhost:8876/nightly/$ionicLoading/complete/",
+        "renderedContent": "describe('$ionicLoading-complete', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/$ionicLoading/complete/');\n});\n\n\n\n});\n"
       }
     ]
   },

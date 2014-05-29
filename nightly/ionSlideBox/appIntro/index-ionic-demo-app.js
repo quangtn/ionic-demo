@@ -41,8 +41,8 @@ var DEMO;
         "extension": "scenario.js",
         "template": "scenario.template.js",
         "outputPath": "nightly/ionSlideBox/appIntro/test.scenario.js",
-        "url": "http://localhost:8765/nightly/ionSlideBox/appIntro/",
-        "renderedContent": "describe('ionSlideBox-appIntro', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionSlideBox/appIntro/');\n});\n\n\nit('should go to slide 2', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should go to slide 1', function(){\n  var ele = element(by.css('.left-buttons .button'));\n  ele.click();\n});\n\nit('should go to slide 2', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should go to slide 3', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should go to main app', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should start over', function(){\n  var ele = element(by.css('ion-nav-view .button'));\n  ele.click();\n});\n\n});\n"
+        "url": "http://localhost:8876/nightly/ionSlideBox/appIntro/",
+        "renderedContent": "describe('ionSlideBox-appIntro', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionSlideBox/appIntro/');\n});\n\n\nit('should go to slide 2', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should go to slide 1', function(){\n  var ele = element(by.css('.left-buttons .button'));\n  ele.click();\n});\n\nit('should go to slide 2', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should go to slide 3', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should go to main app', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should start over', function(){\n  var ele = element(by.css('ion-nav-view .button'));\n  ele.click();\n});\n\n});\n"
       }
     ],
     "css": [

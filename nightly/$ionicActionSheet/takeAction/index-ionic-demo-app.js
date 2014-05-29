@@ -41,8 +41,8 @@ var DEMO;
         "extension": "scenario.js",
         "template": "scenario.template.js",
         "outputPath": "nightly/$ionicActionSheet/takeAction/test.scenario.js",
-        "url": "http://localhost:8765/nightly/$ionicActionSheet/takeAction/",
-        "renderedContent": "describe('$ionicActionSheet-takeAction', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/$ionicActionSheet/takeAction/');\n});\n\n\n\nit('should open up actionsheet', function(){\n  var ele = element(by.css('.button'));\n  ele.click();\n});\n\nit('should close when clicking backdrop', function(){\n  var ele = element(by.css('.action-sheet-backdrop'));\n  ele.click();\n});\n\nit('should open up actionsheet again', function(){\n  var ele = element(by.css('.button'));\n  ele.click();\n});\n\nit('should click the share button', function(){\n  var ele = element.all(by.css('.action-sheet-group .button'));\n  ele.get(0).click();\n});\n\n});\n"
+        "url": "http://localhost:8876/nightly/$ionicActionSheet/takeAction/",
+        "renderedContent": "describe('$ionicActionSheet-takeAction', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/$ionicActionSheet/takeAction/');\n});\n\n\n\nit('should open up actionsheet', function(){\n  var ele = element(by.css('.button'));\n  ele.click();\n});\n\nit('should close when clicking backdrop', function(){\n  var ele = element(by.css('.action-sheet-backdrop'));\n  ele.click();\n});\n\nit('should open up actionsheet again', function(){\n  var ele = element(by.css('.button'));\n  ele.click();\n});\n\nit('should click the share button', function(){\n  var ele = element.all(by.css('.action-sheet-group .button'));\n  ele.get(0).click();\n});\n\n});\n"
       }
     ]
   },

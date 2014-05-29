@@ -41,8 +41,8 @@ var DEMO;
         "extension": "scenario.js",
         "template": "scenario.template.js",
         "outputPath": "nightly/ionList/reorderDelete/test.scenario.js",
-        "url": "http://localhost:8765/nightly/ionList/reorderDelete/",
-        "renderedContent": "describe('ionList-reorderDelete', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionList/reorderDelete/');\n});\n\n\n\nit('should show reorder icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(1).click();\n});\n\nit('should hide reorder icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(1).click();\n});\n\nit('should show delete icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\nit('should hide delete icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\n});\n"
+        "url": "http://localhost:8876/nightly/ionList/reorderDelete/",
+        "renderedContent": "describe('ionList-reorderDelete', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionList/reorderDelete/');\n});\n\n\n\nit('should show reorder icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(1).click();\n});\n\nit('should hide reorder icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(1).click();\n});\n\nit('should show delete icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\nit('should hide delete icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\n});\n"
       }
     ]
   },

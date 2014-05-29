@@ -41,8 +41,8 @@ var DEMO;
         "extension": "scenario.js",
         "template": "scenario.template.js",
         "outputPath": "nightly/ionSideMenus/navWithMenu/test.scenario.js",
-        "url": "http://localhost:8765/nightly/ionSideMenus/navWithMenu/",
-        "renderedContent": "describe('ionSideMenus-navWithMenu', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionSideMenus/navWithMenu/');\n});\n\n\n\nit('should nav to Search from left menu', function(){\n  var ele = element.all(by.css('button[menu-toggle=\"left\"]'));\n  ele.get(0).click();\n\n  browser.sleep(500).then(function(){\n    var itemEle = element.all(by.css('ion-side-menu[side=\"left\"] a'));\n    itemEle.get(0).click();\n  });\n});\n\nit('should nav to Browse from left menu', function(){\n  var ele = element.all(by.css('button[menu-toggle=\"left\"]'));\n  ele.get(0).click();\n\n  browser.sleep(500).then(function(){\n    var itemEle = element.all(by.css('ion-side-menu[side=\"left\"] a'));\n    itemEle.get(1).click();\n  });\n});\n\n});\n"
+        "url": "http://localhost:8876/nightly/ionSideMenus/navWithMenu/",
+        "renderedContent": "describe('ionSideMenus-navWithMenu', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionSideMenus/navWithMenu/');\n});\n\n\n\nit('should nav to Search from left menu', function(){\n  var ele = element.all(by.css('button[menu-toggle=\"left\"]'));\n  ele.get(0).click();\n\n  browser.sleep(500).then(function(){\n    var itemEle = element.all(by.css('ion-side-menu[side=\"left\"] a'));\n    itemEle.get(0).click();\n  });\n});\n\nit('should nav to Browse from left menu', function(){\n  var ele = element.all(by.css('button[menu-toggle=\"left\"]'));\n  ele.get(0).click();\n\n  browser.sleep(500).then(function(){\n    var itemEle = element.all(by.css('ion-side-menu[side=\"left\"] a'));\n    itemEle.get(1).click();\n  });\n});\n\n});\n"
       }
     ]
   },

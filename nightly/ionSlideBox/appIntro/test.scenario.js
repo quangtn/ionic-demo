@@ -1,7 +1,7 @@
 describe('ionSlideBox-appIntro', function() {
 
 it('should init', function() {
-  browser.get('http://localhost:8765/nightly/ionSlideBox/appIntro/');
+  browser.get('http://localhost:8876/nightly/ionSlideBox/appIntro/');
 });
 
 

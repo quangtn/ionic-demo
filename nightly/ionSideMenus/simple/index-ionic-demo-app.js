@@ -41,8 +41,8 @@ var DEMO;
         "extension": "scenario.js",
         "template": "scenario.template.js",
         "outputPath": "nightly/ionSideMenus/simple/test.scenario.js",
-        "url": "http://localhost:8765/nightly/ionSideMenus/simple/",
-        "renderedContent": "describe('ionSideMenus-simple', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionSideMenus/simple/');\n});\n\n\nit('should show left menu', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\nit('should hide left menu by clicking header button', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\nit('should show left menu', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\nit('should hide left menu by close menu item', function(){\n  var ele = element.all(by.css('ion-side-menu[side=\"left\"] a'));\n  ele.get(0).click();\n});\n\n});\n"
+        "url": "http://localhost:8876/nightly/ionSideMenus/simple/",
+        "renderedContent": "describe('ionSideMenus-simple', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionSideMenus/simple/');\n});\n\n\nit('should show left menu', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\nit('should hide left menu by clicking header button', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\nit('should show left menu', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\nit('should hide left menu by close menu item', function(){\n  var ele = element.all(by.css('ion-side-menu[side=\"left\"] a'));\n  ele.get(0).click();\n});\n\n});\n"
       }
     ]
   },

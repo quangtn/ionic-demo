@@ -1,7 +1,7 @@
 describe('ionHeaderBar-simple', function() {
 
 it('should init', function() {
-  browser.get('http://localhost:8765/nightly/ionHeaderBar/simple/');
+  browser.get('http://localhost:8876/nightly/ionHeaderBar/simple/');
 });
 
 

@@ -41,8 +41,8 @@ var DEMO;
         "extension": "scenario.js",
         "template": "scenario.template.js",
         "outputPath": "nightly/ionRefresher/refreshList/test.scenario.js",
-        "url": "http://localhost:8765/nightly/ionRefresher/refreshList/",
-        "renderedContent": "describe('ionRefresher-refreshList', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionRefresher/refreshList/');\n});\n\n\n\n});\n"
+        "url": "http://localhost:8876/nightly/ionRefresher/refreshList/",
+        "renderedContent": "describe('ionRefresher-refreshList', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionRefresher/refreshList/');\n});\n\n\n\n});\n"
       }
     ]
   },

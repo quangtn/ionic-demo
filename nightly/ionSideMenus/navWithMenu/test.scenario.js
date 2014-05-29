@@ -1,7 +1,7 @@
 describe('ionSideMenus-navWithMenu', function() {
 
 it('should init', function() {
-  browser.get('http://localhost:8765/nightly/ionSideMenus/navWithMenu/');
+  browser.get('http://localhost:8876/nightly/ionSideMenus/navWithMenu/');
 });
 
 

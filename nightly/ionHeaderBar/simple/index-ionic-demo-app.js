@@ -41,8 +41,8 @@ var DEMO;
         "extension": "scenario.js",
         "template": "scenario.template.js",
         "outputPath": "nightly/ionHeaderBar/simple/test.scenario.js",
-        "url": "http://localhost:8765/nightly/ionHeaderBar/simple/",
-        "renderedContent": "describe('ionHeaderBar-simple', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionHeaderBar/simple/');\n});\n\n\n\nit('should show subheader', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(0).click();\n});\n\nit('should hide subheader', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(0).click();\n});\n\nit('should hide header', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(1).click();\n});\n\nit('should show header', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(1).click();\n});\n\n});\n"
+        "url": "http://localhost:8876/nightly/ionHeaderBar/simple/",
+        "renderedContent": "describe('ionHeaderBar-simple', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionHeaderBar/simple/');\n});\n\n\n\nit('should show subheader', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(0).click();\n});\n\nit('should hide subheader', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(0).click();\n});\n\nit('should hide header', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(1).click();\n});\n\nit('should show header', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(1).click();\n});\n\n});\n"
       }
     ]
   },

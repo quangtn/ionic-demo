@@ -41,8 +41,8 @@ var DEMO;
         "extension": "scenario.js",
         "template": "scenario.template.js",
         "outputPath": "nightly/ionCheckbox/simple/test.scenario.js",
-        "url": "http://localhost:8765/nightly/ionCheckbox/simple/",
-        "renderedContent": "describe('ionCheckbox-simple', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionCheckbox/simple/');\n});\n\n\n\nit('should uncheck 1st and check 2nd checkbox by clicking its label', function(){\n  var ele = element.all(by.css('label.item-checkbox'));\n  ele.get(0).click();\n  ele.get(1).click();\n});\n\nit('should check 1st and uncheck 2nd checkbox by clicking its label', function(){\n  var ele = element.all(by.css('label.item-checkbox'));\n  ele.get(0).click();\n  ele.get(1).click();\n});\n\n});\n"
+        "url": "http://localhost:8876/nightly/ionCheckbox/simple/",
+        "renderedContent": "describe('ionCheckbox-simple', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionCheckbox/simple/');\n});\n\n\n\nit('should uncheck 1st and check 2nd checkbox by clicking its label', function(){\n  var ele = element.all(by.css('label.item-checkbox'));\n  ele.get(0).click();\n  ele.get(1).click();\n});\n\nit('should check 1st and uncheck 2nd checkbox by clicking its label', function(){\n  var ele = element.all(by.css('label.item-checkbox'));\n  ele.get(0).click();\n  ele.get(1).click();\n});\n\n});\n"
       }
     ]
   },

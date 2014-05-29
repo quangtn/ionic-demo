@@ -1,7 +1,7 @@
 describe('ionCheckbox-simple', function() {
 
 it('should init', function() {
-  browser.get('http://localhost:8765/nightly/ionCheckbox/simple/');
+  browser.get('http://localhost:8876/nightly/ionCheckbox/simple/');
 });
 
 

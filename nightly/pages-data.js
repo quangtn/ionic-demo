@@ -40,8 +40,8 @@ var DEMOS = [
           "extension": "scenario.js",
           "template": "scenario.template.js",
           "outputPath": "nightly/ionCheckbox/simple/test.scenario.js",
-          "url": "http://localhost:8765/nightly/ionCheckbox/simple/",
-          "renderedContent": "describe('ionCheckbox-simple', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionCheckbox/simple/');\n});\n\n\n\nit('should uncheck 1st and check 2nd checkbox by clicking its label', function(){\n  var ele = element.all(by.css('label.item-checkbox'));\n  ele.get(0).click();\n  ele.get(1).click();\n});\n\nit('should check 1st and uncheck 2nd checkbox by clicking its label', function(){\n  var ele = element.all(by.css('label.item-checkbox'));\n  ele.get(0).click();\n  ele.get(1).click();\n});\n\n});\n"
+          "url": "http://localhost:8876/nightly/ionCheckbox/simple/",
+          "renderedContent": "describe('ionCheckbox-simple', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionCheckbox/simple/');\n});\n\n\n\nit('should uncheck 1st and check 2nd checkbox by clicking its label', function(){\n  var ele = element.all(by.css('label.item-checkbox'));\n  ele.get(0).click();\n  ele.get(1).click();\n});\n\nit('should check 1st and uncheck 2nd checkbox by clicking its label', function(){\n  var ele = element.all(by.css('label.item-checkbox'));\n  ele.get(0).click();\n  ele.get(1).click();\n});\n\n});\n"
         }
       ]
     },
@@ -91,8 +91,8 @@ var DEMOS = [
           "extension": "scenario.js",
           "template": "scenario.template.js",
           "outputPath": "nightly/collectionRepeat/contacts/test.scenario.js",
-          "url": "http://localhost:8765/nightly/collectionRepeat/contacts/",
-          "renderedContent": "describe('collectionRepeat-contacts', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/collectionRepeat/contacts/');\n});\n\n\nit('should scroll to the bottom', function(){\n  var ele = element(by.css('.bar-header .button'));\n  ele.click();\n  browser.sleep(200);\n});\n\nit('should scroll to the top', function(){\n  var ele = element(by.css('.bar-header'));\n  ele.click();\n  browser.sleep(200);\n});\n\nit('should filter by juan', function(){\n  var ele = element(by.model('search'));\n  ele.sendKeys('juan');\n});\n\nit('should clear search', function(){\n  var ele = element(by.css('.bar-header .input-button'));\n  ele.click();\n});\n\n});\n"
+          "url": "http://localhost:8876/nightly/collectionRepeat/contacts/",
+          "renderedContent": "describe('collectionRepeat-contacts', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/collectionRepeat/contacts/');\n});\n\n\nit('should scroll to the bottom', function(){\n  var ele = element(by.css('.bar-header .button'));\n  ele.click();\n  browser.sleep(200);\n});\n\nit('should scroll to the top', function(){\n  var ele = element(by.css('.bar-header'));\n  ele.click();\n  browser.sleep(200);\n});\n\nit('should filter by juan', function(){\n  var ele = element(by.model('search'));\n  ele.sendKeys('juan');\n});\n\nit('should clear search', function(){\n  var ele = element(by.css('.bar-header .input-button'));\n  ele.click();\n});\n\n});\n"
         }
       ],
       "css": [
@@ -156,8 +156,8 @@ var DEMOS = [
           "extension": "scenario.js",
           "template": "scenario.template.js",
           "outputPath": "nightly/ionFooterBar/simple/test.scenario.js",
-          "url": "http://localhost:8765/nightly/ionFooterBar/simple/",
-          "renderedContent": "describe('ionFooterBar-simple', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionFooterBar/simple/');\n});\n\n\n\nit('should show subfooter', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(0).click();\n});\n\nit('should hide subfooter', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(0).click();\n});\n\nit('should hide footer', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(1).click();\n});\n\nit('should show footer', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(1).click();\n});\n\n});\n"
+          "url": "http://localhost:8876/nightly/ionFooterBar/simple/",
+          "renderedContent": "describe('ionFooterBar-simple', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionFooterBar/simple/');\n});\n\n\n\nit('should show subfooter', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(0).click();\n});\n\nit('should hide subfooter', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(0).click();\n});\n\nit('should hide footer', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(1).click();\n});\n\nit('should show footer', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(1).click();\n});\n\n});\n"
         }
       ]
     },
@@ -207,8 +207,8 @@ var DEMOS = [
           "extension": "scenario.js",
           "template": "scenario.template.js",
           "outputPath": "nightly/ionHeaderBar/simple/test.scenario.js",
-          "url": "http://localhost:8765/nightly/ionHeaderBar/simple/",
-          "renderedContent": "describe('ionHeaderBar-simple', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionHeaderBar/simple/');\n});\n\n\n\nit('should show subheader', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(0).click();\n});\n\nit('should hide subheader', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(0).click();\n});\n\nit('should hide header', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(1).click();\n});\n\nit('should show header', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(1).click();\n});\n\n});\n"
+          "url": "http://localhost:8876/nightly/ionHeaderBar/simple/",
+          "renderedContent": "describe('ionHeaderBar-simple', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionHeaderBar/simple/');\n});\n\n\n\nit('should show subheader', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(0).click();\n});\n\nit('should hide subheader', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(0).click();\n});\n\nit('should hide header', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(1).click();\n});\n\nit('should show header', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(1).click();\n});\n\n});\n"
         }
       ]
     },
@@ -258,8 +258,8 @@ var DEMOS = [
           "extension": "scenario.js",
           "template": "scenario.template.js",
           "outputPath": "nightly/ionInfiniteScroll/forever/test.scenario.js",
-          "url": "http://localhost:8765/nightly/ionInfiniteScroll/forever/",
-          "renderedContent": "describe('ionInfiniteScroll-forever', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionInfiniteScroll/forever/');\n});\n\n\n\n});\n"
+          "url": "http://localhost:8876/nightly/ionInfiniteScroll/forever/",
+          "renderedContent": "describe('ionInfiniteScroll-forever', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionInfiniteScroll/forever/');\n});\n\n\n\n});\n"
         }
       ]
     },
@@ -309,8 +309,8 @@ var DEMOS = [
           "extension": "scenario.js",
           "template": "scenario.template.js",
           "outputPath": "nightly/ionList/animated/test.scenario.js",
-          "url": "http://localhost:8765/nightly/ionList/animated/",
-          "renderedContent": "describe('ionList-animated', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionList/animated/');\n});\n\n\n\nit('should add item below Item 0', function(){\n  var ele = element.all(by.css('.list .button'));\n  ele.get(0).click();\n});\n\nit('should remove Item 0', function(){\n  var ele = element.all(by.css('.list .button'));\n  ele.get(1).click();\n});\n\n});\n"
+          "url": "http://localhost:8876/nightly/ionList/animated/",
+          "renderedContent": "describe('ionList-animated', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionList/animated/');\n});\n\n\n\nit('should add item below Item 0', function(){\n  var ele = element.all(by.css('.list .button'));\n  ele.get(0).click();\n});\n\nit('should remove Item 0', function(){\n  var ele = element.all(by.css('.list .button'));\n  ele.get(1).click();\n});\n\n});\n"
         }
       ],
       "css": [
@@ -374,8 +374,8 @@ var DEMOS = [
           "extension": "scenario.js",
           "template": "scenario.template.js",
           "outputPath": "nightly/ionList/reorderDelete/test.scenario.js",
-          "url": "http://localhost:8765/nightly/ionList/reorderDelete/",
-          "renderedContent": "describe('ionList-reorderDelete', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionList/reorderDelete/');\n});\n\n\n\nit('should show reorder icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(1).click();\n});\n\nit('should hide reorder icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(1).click();\n});\n\nit('should show delete icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\nit('should hide delete icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\n});\n"
+          "url": "http://localhost:8876/nightly/ionList/reorderDelete/",
+          "renderedContent": "describe('ionList-reorderDelete', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionList/reorderDelete/');\n});\n\n\n\nit('should show reorder icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(1).click();\n});\n\nit('should hide reorder icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(1).click();\n});\n\nit('should show delete icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\nit('should hide delete icons', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\n});\n"
         }
       ]
     },
@@ -425,8 +425,8 @@ var DEMOS = [
           "extension": "scenario.js",
           "template": "scenario.template.js",
           "outputPath": "nightly/ionRadio/chooseOne/test.scenario.js",
-          "url": "http://localhost:8765/nightly/ionRadio/chooseOne/",
-          "renderedContent": "describe('ionRadio-chooseOne', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionRadio/chooseOne/');\n});\n\n\n\n});\n"
+          "url": "http://localhost:8876/nightly/ionRadio/chooseOne/",
+          "renderedContent": "describe('ionRadio-chooseOne', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionRadio/chooseOne/');\n});\n\n\n\n});\n"
         }
       ]
     },
@@ -476,8 +476,8 @@ var DEMOS = [
           "extension": "scenario.js",
           "template": "scenario.template.js",
           "outputPath": "nightly/ionRefresher/refreshList/test.scenario.js",
-          "url": "http://localhost:8765/nightly/ionRefresher/refreshList/",
-          "renderedContent": "describe('ionRefresher-refreshList', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionRefresher/refreshList/');\n});\n\n\n\n});\n"
+          "url": "http://localhost:8876/nightly/ionRefresher/refreshList/",
+          "renderedContent": "describe('ionRefresher-refreshList', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionRefresher/refreshList/');\n});\n\n\n\n});\n"
         }
       ]
     },
@@ -527,8 +527,8 @@ var DEMOS = [
           "extension": "scenario.js",
           "template": "scenario.template.js",
           "outputPath": "nightly/ionSideMenus/navWithMenu/test.scenario.js",
-          "url": "http://localhost:8765/nightly/ionSideMenus/navWithMenu/",
-          "renderedContent": "describe('ionSideMenus-navWithMenu', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionSideMenus/navWithMenu/');\n});\n\n\n\nit('should nav to Search from left menu', function(){\n  var ele = element.all(by.css('button[menu-toggle=\"left\"]'));\n  ele.get(0).click();\n\n  browser.sleep(500).then(function(){\n    var itemEle = element.all(by.css('ion-side-menu[side=\"left\"] a'));\n    itemEle.get(0).click();\n  });\n});\n\nit('should nav to Browse from left menu', function(){\n  var ele = element.all(by.css('button[menu-toggle=\"left\"]'));\n  ele.get(0).click();\n\n  browser.sleep(500).then(function(){\n    var itemEle = element.all(by.css('ion-side-menu[side=\"left\"] a'));\n    itemEle.get(1).click();\n  });\n});\n\n});\n"
+          "url": "http://localhost:8876/nightly/ionSideMenus/navWithMenu/",
+          "renderedContent": "describe('ionSideMenus-navWithMenu', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionSideMenus/navWithMenu/');\n});\n\n\n\nit('should nav to Search from left menu', function(){\n  var ele = element.all(by.css('button[menu-toggle=\"left\"]'));\n  ele.get(0).click();\n\n  browser.sleep(500).then(function(){\n    var itemEle = element.all(by.css('ion-side-menu[side=\"left\"] a'));\n    itemEle.get(0).click();\n  });\n});\n\nit('should nav to Browse from left menu', function(){\n  var ele = element.all(by.css('button[menu-toggle=\"left\"]'));\n  ele.get(0).click();\n\n  browser.sleep(500).then(function(){\n    var itemEle = element.all(by.css('ion-side-menu[side=\"left\"] a'));\n    itemEle.get(1).click();\n  });\n});\n\n});\n"
         }
       ]
     },
@@ -578,8 +578,8 @@ var DEMOS = [
           "extension": "scenario.js",
           "template": "scenario.template.js",
           "outputPath": "nightly/ionSideMenus/simple/test.scenario.js",
-          "url": "http://localhost:8765/nightly/ionSideMenus/simple/",
-          "renderedContent": "describe('ionSideMenus-simple', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionSideMenus/simple/');\n});\n\n\nit('should show left menu', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\nit('should hide left menu by clicking header button', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\nit('should show left menu', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\nit('should hide left menu by close menu item', function(){\n  var ele = element.all(by.css('ion-side-menu[side=\"left\"] a'));\n  ele.get(0).click();\n});\n\n});\n"
+          "url": "http://localhost:8876/nightly/ionSideMenus/simple/",
+          "renderedContent": "describe('ionSideMenus-simple', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionSideMenus/simple/');\n});\n\n\nit('should show left menu', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\nit('should hide left menu by clicking header button', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\nit('should show left menu', function(){\n  var ele = element.all(by.css('.bar-header .button'));\n  ele.get(0).click();\n});\n\nit('should hide left menu by close menu item', function(){\n  var ele = element.all(by.css('ion-side-menu[side=\"left\"] a'));\n  ele.get(0).click();\n});\n\n});\n"
         }
       ]
     },
@@ -629,8 +629,8 @@ var DEMOS = [
           "extension": "scenario.js",
           "template": "scenario.template.js",
           "outputPath": "nightly/ionSlideBox/appIntro/test.scenario.js",
-          "url": "http://localhost:8765/nightly/ionSlideBox/appIntro/",
-          "renderedContent": "describe('ionSlideBox-appIntro', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionSlideBox/appIntro/');\n});\n\n\nit('should go to slide 2', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should go to slide 1', function(){\n  var ele = element(by.css('.left-buttons .button'));\n  ele.click();\n});\n\nit('should go to slide 2', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should go to slide 3', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should go to main app', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should start over', function(){\n  var ele = element(by.css('ion-nav-view .button'));\n  ele.click();\n});\n\n});\n"
+          "url": "http://localhost:8876/nightly/ionSlideBox/appIntro/",
+          "renderedContent": "describe('ionSlideBox-appIntro', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionSlideBox/appIntro/');\n});\n\n\nit('should go to slide 2', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should go to slide 1', function(){\n  var ele = element(by.css('.left-buttons .button'));\n  ele.click();\n});\n\nit('should go to slide 2', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should go to slide 3', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should go to main app', function(){\n  var ele = element(by.css('.right-buttons .button'));\n  ele.click();\n});\n\nit('should start over', function(){\n  var ele = element(by.css('ion-nav-view .button'));\n  ele.click();\n});\n\n});\n"
         }
       ],
       "css": [
@@ -694,8 +694,8 @@ var DEMOS = [
           "extension": "scenario.js",
           "template": "scenario.template.js",
           "outputPath": "nightly/ionTabs/tabsAndNav/test.scenario.js",
-          "url": "http://localhost:8765/nightly/ionTabs/tabsAndNav/",
-          "renderedContent": "describe('ionTabs-tabsAndNav', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionTabs/tabsAndNav/');\n});\n\n\nit('should go to page 2 in Home tab', function(){\n  var ele = element.all(by.css('ion-nav-view[name=\"home-tab\"] .button'));\n  ele.get(0).click();\n});\n\nit('should go to page 3 in Home tab', function(){\n  var ele = element.all(by.css('ion-nav-view[name=\"home-tab\"] .button'));\n  ele.get(1).click();\n});\n\nit('should go to About tab', function(){\n  var ele = element.all(by.css('.tabs a'));\n  ele.get(1).click();\n});\n\nit('should go to page 2 in About tab', function(){\n  var ele = element.all(by.css('ion-nav-view[name=\"about-tab\"] .button'));\n  ele.get(0).click();\n});\n\nit('should go to Contact tab', function(){\n  var ele = element.all(by.css('.tabs a'));\n  ele.get(2).click();\n});\n\nit('should go to About tab and still be at page 2', function(){\n  var ele = element.all(by.css('.tabs a'));\n  ele.get(1).click();\n});\n\nit('should go to Home tab and still be at page 3', function(){\n  var ele = element.all(by.css('.tabs a'));\n  ele.get(0).click();\n});\n\nit('should go back to page 2 in Home tab', function(){\n  var ele = element(by.css('ion-nav-back-button'));\n  ele.click();\n});\n\nit('should go back to page 1 in Home tab', function(){\n  var ele = element(by.css('ion-nav-back-button'));\n  ele.click();\n});\n\nit('should go to About tab and still be at page 2', function(){\n  var ele = element.all(by.css('.tabs a'));\n  ele.get(1).click();\n});\n\nit('should go back to page 1 in About tab', function(){\n  var ele = element(by.css('ion-nav-back-button'));\n  ele.click();\n});\n\nit('should go to Home tab and still be at page 1', function(){\n  var ele = element.all(by.css('.tabs a'));\n  ele.get(0).click();\n});\n\n});\n"
+          "url": "http://localhost:8876/nightly/ionTabs/tabsAndNav/",
+          "renderedContent": "describe('ionTabs-tabsAndNav', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionTabs/tabsAndNav/');\n});\n\n\nit('should go to page 2 in Home tab', function(){\n  var ele = element.all(by.css('ion-nav-view[name=\"home-tab\"] .button'));\n  ele.get(0).click();\n});\n\nit('should go to page 3 in Home tab', function(){\n  var ele = element.all(by.css('ion-nav-view[name=\"home-tab\"] .button'));\n  ele.get(1).click();\n});\n\nit('should go to About tab', function(){\n  var ele = element.all(by.css('.tabs a'));\n  ele.get(1).click();\n});\n\nit('should go to page 2 in About tab', function(){\n  var ele = element.all(by.css('ion-nav-view[name=\"about-tab\"] .button'));\n  ele.get(0).click();\n});\n\nit('should go to Contact tab', function(){\n  var ele = element.all(by.css('.tabs a'));\n  ele.get(2).click();\n});\n\nit('should go to About tab and still be at page 2', function(){\n  var ele = element.all(by.css('.tabs a'));\n  ele.get(1).click();\n});\n\nit('should go to Home tab and still be at page 3', function(){\n  var ele = element.all(by.css('.tabs a'));\n  ele.get(0).click();\n});\n\nit('should go back to page 2 in Home tab', function(){\n  var ele = element(by.css('ion-nav-back-button'));\n  ele.click();\n});\n\nit('should go back to page 1 in Home tab', function(){\n  var ele = element(by.css('ion-nav-back-button'));\n  ele.click();\n});\n\nit('should go to About tab and still be at page 2', function(){\n  var ele = element.all(by.css('.tabs a'));\n  ele.get(1).click();\n});\n\nit('should go back to page 1 in About tab', function(){\n  var ele = element(by.css('ion-nav-back-button'));\n  ele.click();\n});\n\nit('should go to Home tab and still be at page 1', function(){\n  var ele = element.all(by.css('.tabs a'));\n  ele.get(0).click();\n});\n\n});\n"
         }
       ]
     },
@@ -745,8 +745,8 @@ var DEMOS = [
           "extension": "scenario.js",
           "template": "scenario.template.js",
           "outputPath": "nightly/$ionicActionSheet/takeAction/test.scenario.js",
-          "url": "http://localhost:8765/nightly/$ionicActionSheet/takeAction/",
-          "renderedContent": "describe('$ionicActionSheet-takeAction', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/$ionicActionSheet/takeAction/');\n});\n\n\n\nit('should open up actionsheet', function(){\n  var ele = element(by.css('.button'));\n  ele.click();\n});\n\nit('should close when clicking backdrop', function(){\n  var ele = element(by.css('.action-sheet-backdrop'));\n  ele.click();\n});\n\nit('should open up actionsheet again', function(){\n  var ele = element(by.css('.button'));\n  ele.click();\n});\n\nit('should click the share button', function(){\n  var ele = element.all(by.css('.action-sheet-group .button'));\n  ele.get(0).click();\n});\n\n});\n"
+          "url": "http://localhost:8876/nightly/$ionicActionSheet/takeAction/",
+          "renderedContent": "describe('$ionicActionSheet-takeAction', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/$ionicActionSheet/takeAction/');\n});\n\n\n\nit('should open up actionsheet', function(){\n  var ele = element(by.css('.button'));\n  ele.click();\n});\n\nit('should close when clicking backdrop', function(){\n  var ele = element(by.css('.action-sheet-backdrop'));\n  ele.click();\n});\n\nit('should open up actionsheet again', function(){\n  var ele = element(by.css('.button'));\n  ele.click();\n});\n\nit('should click the share button', function(){\n  var ele = element.all(by.css('.action-sheet-group .button'));\n  ele.get(0).click();\n});\n\n});\n"
         }
       ]
     },
@@ -796,8 +796,8 @@ var DEMOS = [
           "extension": "scenario.js",
           "template": "scenario.template.js",
           "outputPath": "nightly/$ionicLoading/complete/test.scenario.js",
-          "url": "http://localhost:8765/nightly/$ionicLoading/complete/",
-          "renderedContent": "describe('$ionicLoading-complete', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/$ionicLoading/complete/');\n});\n\n\n\n});\n"
+          "url": "http://localhost:8876/nightly/$ionicLoading/complete/",
+          "renderedContent": "describe('$ionicLoading-complete', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/$ionicLoading/complete/');\n});\n\n\n\n});\n"
         }
       ]
     },
@@ -847,8 +847,8 @@ var DEMOS = [
           "extension": "scenario.js",
           "template": "scenario.template.js",
           "outputPath": "nightly/$ionicPopup/popping/test.scenario.js",
-          "url": "http://localhost:8765/nightly/$ionicPopup/popping/",
-          "renderedContent": "describe('$ionicPopup-popping', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/$ionicPopup/popping/');\n});\n\n\n\nit('should open confirm popup', function(){\n  var ele = element.all(by.css('[ng-click=\"showConfirm()\"]'));\n  ele.get(0).click();\n});\n\nit('should cancel confirm popup', function(){\n  var ele = element.all(by.css('.popup-buttons .button'));\n  ele.get(0).click();\n});\n\nit('should open prompt popup and enter input', function(){\n  var ele = element.all(by.css('[ng-click=\"showPrompt()\"]'));\n  ele.get(0).click();\n  ele = element(by.model('data.response'));\n  ele.sendKeys('Waffles');\n});\n\nit('should close prompt popup by clicking OK', function(){\n  var ele = element.all(by.css('.popup-buttons .button'));\n  ele.get(1).click();\n});\n\nit('should open alert popup', function(){\n  var ele = element.all(by.css('[ng-click=\"showAlert()\"]'));\n  ele.get(0).click();\n});\n\nit('should close alert popup', function(){\n  var ele = element.all(by.css('.popup-buttons .button'));\n  ele.get(0).click();\n});\n\n});\n"
+          "url": "http://localhost:8876/nightly/$ionicPopup/popping/",
+          "renderedContent": "describe('$ionicPopup-popping', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/$ionicPopup/popping/');\n});\n\n\n\nit('should open confirm popup', function(){\n  var ele = element.all(by.css('[ng-click=\"showConfirm()\"]'));\n  ele.get(0).click();\n});\n\nit('should cancel confirm popup', function(){\n  var ele = element.all(by.css('.popup-buttons .button'));\n  ele.get(0).click();\n});\n\nit('should open prompt popup and enter input', function(){\n  var ele = element.all(by.css('[ng-click=\"showPrompt()\"]'));\n  ele.get(0).click();\n  ele = element(by.model('data.response'));\n  ele.sendKeys('Waffles');\n});\n\nit('should close prompt popup by clicking OK', function(){\n  var ele = element.all(by.css('.popup-buttons .button'));\n  ele.get(1).click();\n});\n\nit('should open alert popup', function(){\n  var ele = element.all(by.css('[ng-click=\"showAlert()\"]'));\n  ele.get(0).click();\n});\n\nit('should close alert popup', function(){\n  var ele = element.all(by.css('.popup-buttons .button'));\n  ele.get(0).click();\n});\n\n});\n"
         }
       ]
     },

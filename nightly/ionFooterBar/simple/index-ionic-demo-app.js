@@ -41,8 +41,8 @@ var DEMO;
         "extension": "scenario.js",
         "template": "scenario.template.js",
         "outputPath": "nightly/ionFooterBar/simple/test.scenario.js",
-        "url": "http://localhost:8765/nightly/ionFooterBar/simple/",
-        "renderedContent": "describe('ionFooterBar-simple', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8765/nightly/ionFooterBar/simple/');\n});\n\n\n\nit('should show subfooter', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(0).click();\n});\n\nit('should hide subfooter', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(0).click();\n});\n\nit('should hide footer', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(1).click();\n});\n\nit('should show footer', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(1).click();\n});\n\n});\n"
+        "url": "http://localhost:8876/nightly/ionFooterBar/simple/",
+        "renderedContent": "describe('ionFooterBar-simple', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionFooterBar/simple/');\n});\n\n\n\nit('should show subfooter', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(0).click();\n});\n\nit('should hide subfooter', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(0).click();\n});\n\nit('should hide footer', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(1).click();\n});\n\nit('should show footer', function(){\n  var ele = element.all(by.css('.toggle'));\n  ele.get(1).click();\n});\n\n});\n"
       }
     ]
   },
