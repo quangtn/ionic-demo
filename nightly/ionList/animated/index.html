@@ -1,30 +1,29 @@
+<!doctype html>
+<html ng-app="animated" ng-controller="IonicDemoCtrl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<link rel="stylesheet" href="/nightly/ionic/css/ionic.min.css">
+<script src="/nightly/ionic/js/ionic.bundle.min.js"></script>
+<script src="/nightly/pages-data.js"></script>
 
+
+<link rel="stylesheet" href="style.css">
+
+
+  <script src="index.js"></script>
+
+<script src="index-ionic-demo-app.js"></script>
+</head>
+<body>
+
+
+
+<div class="demo-content-pane">
+  
+  
 <div ng-controller="AnimatedListCtrl">
   <ion-header-bar class="bar-positive">
-    <h1 class="title">Animated List</h1>
-  </ion-header-bar>
-  <ion-content>
-    <ion-list show-delete="showDelete">
-
-      <ion-item class="animated-item"
-                ng-repeat="item in items">
-        {{item}}
-        <div class="item-note">
-          <a class="button button-small"
-             ng-click="addItem($index)">
-             Add
-          </a>
-          <a class="button button-small"
-             ng-click="items.splice($index, 1)">
-            Remove
-          </a>
-        </div>
-      </ion-item>
-
-    </ion-list>
-  </ion-content>
-</div>
->
     <h1 class="title">Animated List</h1>
   </ion-header-bar>
   <ion-content>
