@@ -1,24 +1,23 @@
-<!doctype html>
-<html ng-app="takeAction" ng-controller="IonicDemoCtrl">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-<link rel="stylesheet" href="/nightly/ionic/css/ionic.min.css">
-<script src="/nightly/ionic/js/ionic.bundle.min.js"></script>
-<script src="/nightly/pages-data.js"></script>
 
-
-
-  <script src="index.js"></script>
-
-<script src="index-ionic-demo-app.js"></script>
-</head>
-<body>
-
-
-
-<div class="demo-content-pane">
-  
+<ion-header-bar class="bar-positive">
+  <h1 class="title">Action</h1>
+</ion-header-bar>
+<ion-content ng-controller="ActionSheetCtrl" class="padding">
+  <div class="button button-assertive button-block" ng-click="takeAction()">
+    Take Action!
+  </div>
+  <div class="card" ng-show="messages.length">
+    <div class="item item-divider">
+      User Log
+    </div>
+    <div class="item item-text-wrap">
+      <div ng-repeat="message in messages">
+        {{message.text}}
+      </div>
+    </div>
+  </div>
+</ion-content>
+ 
   
 <ion-header-bar class="bar-positive">
   <h1 class="title">Action</h1>
