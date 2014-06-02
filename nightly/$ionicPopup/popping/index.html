@@ -1,4 +1,25 @@
+<!doctype html>
+<html ng-app="popping" ng-controller="IonicDemoCtrl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+<link rel="stylesheet" href="/nightly/ionic/css/ionic.min.css">
+<script src="/nightly/ionic/js/ionic.bundle.min.js"></script>
+<script src="/nightly/pages-data.js"></script>
 
+
+
+  <script src="index.js"></script>
+
+<script src="index-ionic-demo-app.js"></script>
+</head>
+<body>
+
+
+
+<div class="demo-content-pane">
+  
+  
 
 <ion-header-bar class="bar-positive">
   <h1 class="title">Popups</h1>
@@ -7,20 +28,6 @@
   <button class="button button-dark" ng-click="showPopup()">Generic</button>
   <button class="button button-primary" ng-click="showConfirm()">Confirm</button>
   <button class="button button-balanced" ng-click="showPrompt()">Prompt</button>
-  <button class="button button-balanced" ng-click="showPasswordPrompt()">Password Prompt</button>
-  <button class="button button-positive" ng-click="showAlert()">Alert</button>
-  <div class="list">
-    <a class="item" href="#"
-      ng-repeat="item in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]">
-      Item {{item}}
-    </a>
-  </div>
-</ion-content>
-
-<script id="popup-template.html" type="text/ng-template">
-  <input ng-model="data.wifi" type="text" placeholder="Password">
-</script>
-g-click="showPrompt()">Prompt</button>
   <button class="button button-balanced" ng-click="showPasswordPrompt()">Password Prompt</button>
   <button class="button button-positive" ng-click="showAlert()">Alert</button>
   <div class="list">
