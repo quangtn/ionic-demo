@@ -421,12 +421,12 @@ var DEMOS = [
           "id": "ionRadio-chooseOne",
           "fileType": ".scenario.js",
           "fileName": "test.scenario.js",
-          "contents": "",
+          "contents": "\n\nit('should check 3rd radio by clicking its label', function(){\n  var ele = element.all(by.css('label.item-radio'));\n  ele.get(2).click();\n});\n\nit('should check 4th radio by clicking its label', function(){\n  var ele = element.all(by.css('label.item-radio'));\n  ele.get(3).click();\n});",
           "extension": "scenario.js",
           "template": "scenario.template.js",
           "outputPath": "nightly/ionRadio/chooseOne/test.scenario.js",
           "url": "http://localhost:8876/nightly/ionRadio/chooseOne/",
-          "renderedContent": "describe('ionRadio-chooseOne', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionRadio/chooseOne/');\n});\n\n\n\n});\n"
+          "renderedContent": "describe('ionRadio-chooseOne', function() {\n\nit('should init', function() {\n  browser.get('http://localhost:8876/nightly/ionRadio/chooseOne/');\n});\n\n\n\nit('should check 3rd radio by clicking its label', function(){\n  var ele = element.all(by.css('label.item-radio'));\n  ele.get(2).click();\n});\n\nit('should check 4th radio by clicking its label', function(){\n  var ele = element.all(by.css('label.item-radio'));\n  ele.get(3).click();\n});\n\n});\n"
         }
       ]
     },
