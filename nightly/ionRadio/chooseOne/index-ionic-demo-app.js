@@ -9,11 +9,11 @@ var DEMO;
         "id": "ionRadio-chooseOne",
         "fileType": ".html",
         "fileName": "index.html",
-        "contents": "\n<ion-header-bar class=\"bar-positive\">\n  <h1 class=\"title\">Radios</h1>\n</ion-header-bar>\n<ion-content ng-controller=\"ChooseOneCtrl\">\n  <h1>\n    Your Choice: <span class=\"assertive\">{{choice}}</span> \n  </h1>\n  <ion-radio ng-model=\"choice\" ng-value=\"one\">One</ion-radio>\n  <ion-radio ng-model=\"choice\" ng-value=\"two\">Two</ion-radio>\n  <ion-radio ng-model=\"choice\" ng-value=\"three\">Three</ion-radio>\n  <ion-radio ng-model=\"choice\" ng-value=\"four\">Four</ion-radio>\n  <ion-radio ng-model=\"choice\" ng-value=\"five\">Five</ion-radio>\n</ion-content>",
+        "contents": "\n<ion-header-bar class=\"bar-positive\">\n  <h1 class=\"title\">Radios</h1>\n</ion-header-bar>\n<ion-content ng-controller=\"ChooseOneCtrl\">\n  <h1>\n    Your Choice: <span class=\"assertive\">{{choice}}</span> \n  </h1>\n  <ion-radio ng-model=\"choice\" value=\"one\">One</ion-radio>\n  <ion-radio ng-model=\"choice\" value=\"two\">Two</ion-radio>\n  <ion-radio ng-model=\"choice\" ng-value=\"'three'\">Three</ion-radio>\n  <ion-radio ng-model=\"choice\" ng-value=\"'four'\">Four</ion-radio>\n  <ion-radio ng-model=\"choice\" value=\"five\">Five</ion-radio>\n</ion-content>",
         "extension": "html",
         "template": "asset.contents.template",
         "outputPath": "nightly/ionRadio/chooseOne/index.html",
-        "renderedContent": "\n<ion-header-bar class=\"bar-positive\">\n  <h1 class=\"title\">Radios</h1>\n</ion-header-bar>\n<ion-content ng-controller=\"ChooseOneCtrl\">\n  <h1>\n    Your Choice: <span class=\"assertive\">{{choice}}</span> \n  </h1>\n  <ion-radio ng-model=\"choice\" ng-value=\"one\">One</ion-radio>\n  <ion-radio ng-model=\"choice\" ng-value=\"two\">Two</ion-radio>\n  <ion-radio ng-model=\"choice\" ng-value=\"three\">Three</ion-radio>\n  <ion-radio ng-model=\"choice\" ng-value=\"four\">Four</ion-radio>\n  <ion-radio ng-model=\"choice\" ng-value=\"five\">Five</ion-radio>\n</ion-content>\n"
+        "renderedContent": "\n<ion-header-bar class=\"bar-positive\">\n  <h1 class=\"title\">Radios</h1>\n</ion-header-bar>\n<ion-content ng-controller=\"ChooseOneCtrl\">\n  <h1>\n    Your Choice: <span class=\"assertive\">{{choice}}</span> \n  </h1>\n  <ion-radio ng-model=\"choice\" value=\"one\">One</ion-radio>\n  <ion-radio ng-model=\"choice\" value=\"two\">Two</ion-radio>\n  <ion-radio ng-model=\"choice\" ng-value=\"'three'\">Three</ion-radio>\n  <ion-radio ng-model=\"choice\" ng-value=\"'four'\">Four</ion-radio>\n  <ion-radio ng-model=\"choice\" value=\"five\">Five</ion-radio>\n</ion-content>\n"
       }
     ],
     "js": [
