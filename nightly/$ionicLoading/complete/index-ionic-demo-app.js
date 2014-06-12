@@ -23,11 +23,11 @@ var DEMO;
         "id": "$ionicLoading-complete",
         "fileType": ".js",
         "fileName": "index.js",
-        "contents": "\nangular.module('complete', [])\n.controller('LoadingCtrl', function($scope, $ionicLoading) {\n  $scope.loadingOptions = {\n    duration: 1000,\n    delay: 0,\n    template: '<i class=\"icon ion-loading-c\"></i>\\n<br/>\\nLoading...',\n    noBackdrop: false\n  };\n  $scope.showLoading = function() {\n    $ionicLoading.show($scope.loadingOptions);\n  };\n});",
+        "contents": "\nangular.module('complete', ['ionic'])\n.controller('LoadingCtrl', function($scope, $ionicLoading) {\n  $scope.loadingOptions = {\n    duration: 1000,\n    delay: 0,\n    template: '<i class=\"icon ion-loading-c\"></i>\\n<br/>\\nLoading...',\n    noBackdrop: false\n  };\n  $scope.showLoading = function() {\n    $ionicLoading.show($scope.loadingOptions);\n  };\n});",
         "extension": "js",
         "template": "asset.contents.template",
         "outputPath": "nightly/$ionicLoading/complete/index.js",
-        "renderedContent": "\nangular.module('complete', [])\n.controller('LoadingCtrl', function($scope, $ionicLoading) {\n  $scope.loadingOptions = {\n    duration: 1000,\n    delay: 0,\n    template: '<i class=\"icon ion-loading-c\"></i>\\n<br/>\\nLoading...',\n    noBackdrop: false\n  };\n  $scope.showLoading = function() {\n    $ionicLoading.show($scope.loadingOptions);\n  };\n});\n"
+        "renderedContent": "\nangular.module('complete', ['ionic'])\n.controller('LoadingCtrl', function($scope, $ionicLoading) {\n  $scope.loadingOptions = {\n    duration: 1000,\n    delay: 0,\n    template: '<i class=\"icon ion-loading-c\"></i>\\n<br/>\\nLoading...',\n    noBackdrop: false\n  };\n  $scope.showLoading = function() {\n    $ionicLoading.show($scope.loadingOptions);\n  };\n});\n"
       }
     ],
     "scenario.js": [
