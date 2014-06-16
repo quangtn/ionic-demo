@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="demoApp" ng-controller="IonicDemoCtrl">
+<html ng-app="simple" ng-controller="IonicDemoCtrl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -9,15 +9,60 @@
 
 
 
+  <script src="index.js"></script>
+
 <script src="index-ionic-demo-app.js"></script>
 </head>
 <body>
 
 
 
-<div class="pane">
-  <div ng-include="'demo-list.html'">
+<div class="demo-content-pane">
+  
+  
+<ion-side-menus ng-controller="SideMenusSimpleCtrl">
+
+  <ion-side-menu-content>
+    <ion-header-bar class="bar-positive">
+      <div class="buttons">
+        <div class="button button-clear" ng-click="toggleLeft()">
+          <i class="icon ion-navicon"></i>
+        </div>
+      </div>
+      <h1 class="title">
+        Side
+      </h1>
+    </ion-header-bar>
+    <ion-content class="padding">
+      <p>Slide the content or press the button on the header to open a side menu.</p>
+    </ion-content>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-positive">
+    </ion-header-bar>
+    <ion-content>
+      <a class="item" ng-click="toggleLeft()">
+        Close Menu
+      </a>
+    </ion-content>
+  </ion-side-menu>
+
+</ion-side-menus>
+  
+</div>
+<div class="bar bar-footer bar-light demo-footer" ng-click="$demoModal.show()">
+  <div class="demo-footer-icon" ng-hide="$demoModal.isShown()">
+    <i class="icon ion-chevron-up"></i>
   </div>
+  <h1 class="title" style="right:auto;"
+      ng-bind="$demo.component + ': ' + ($demo.name | humanize)">
+  </h1>
+  <div class="buttons right-buttons">
+    <a class="button" ng-click="demoScratch($demo); $event.stopPropagation()">
+      <i class="icon ion-code"></i>
+      Source
+    </a>
 </div>
 
 

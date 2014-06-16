@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="demoApp" ng-controller="IonicDemoCtrl">
+<html ng-app="complete" ng-controller="IonicDemoCtrl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -9,15 +9,59 @@
 
 
 
+  <script src="index.js"></script>
+
 <script src="index-ionic-demo-app.js"></script>
 </head>
 <body>
 
 
 
-<div class="pane">
-  <div ng-include="'demo-list.html'">
+<div class="demo-content-pane">
+  
+  
+<div ng-controller="LoadingCtrl">
+  <ion-header-bar class="bar-positive">
+    <h1 class="title">Loading Demo</h1>
+    <a class="button" ng-click="showLoading()">
+      <i class="icon ion-more"></i> Load
+    </a>
+  </ion-header-bar>
+  <ion-content>
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Loading Duration (ms)</span>
+        <input type="number" ng-model="loadingOptions.duration">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Loading Delay (ms)</span>
+        <input type="number" ng-model="loadingOptions.delay">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Loading Template</span>
+        <textarea rows="3" ng-model="loadingOptions.template"></textarea>
+      </label>
+      <ion-toggle class="item item-toggle"
+                  ng-model="loadingOptions.noBackdrop">
+        Hide Backdrop?
+      </ion-toggle>
+    </div>
+  </ion-content>
+</div>
+  
+</div>
+<div class="bar bar-footer bar-light demo-footer" ng-click="$demoModal.show()">
+  <div class="demo-footer-icon" ng-hide="$demoModal.isShown()">
+    <i class="icon ion-chevron-up"></i>
   </div>
+  <h1 class="title" style="right:auto;"
+      ng-bind="$demo.component + ': ' + ($demo.name | humanize)">
+  </h1>
+  <div class="buttons right-buttons">
+    <a class="button" ng-click="demoScratch($demo); $event.stopPropagation()">
+      <i class="icon ion-code"></i>
+      Source
+    </a>
 </div>
 
 

@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="demoApp" ng-controller="IonicDemoCtrl">
+<html ng-app="takeAction" ng-controller="IonicDemoCtrl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -9,15 +9,49 @@
 
 
 
+  <script src="index.js"></script>
+
 <script src="index-ionic-demo-app.js"></script>
 </head>
 <body>
 
 
 
-<div class="pane">
-  <div ng-include="'demo-list.html'">
+<div class="demo-content-pane">
+  
+  
+<ion-header-bar class="bar-positive">
+  <h1 class="title">Action</h1>
+</ion-header-bar>
+<ion-content ng-controller="ActionSheetCtrl" class="padding">
+  <div class="button button-assertive button-block" ng-click="takeAction()">
+    Take Action!
   </div>
+  <div class="card" ng-show="messages.length">
+    <div class="item item-divider">
+      User Log
+    </div>
+    <div class="item item-text-wrap">
+      <div ng-repeat="message in messages">
+        {{message.text}}
+      </div>
+    </div>
+  </div>
+</ion-content>
+  
+</div>
+<div class="bar bar-footer bar-light demo-footer" ng-click="$demoModal.show()">
+  <div class="demo-footer-icon" ng-hide="$demoModal.isShown()">
+    <i class="icon ion-chevron-up"></i>
+  </div>
+  <h1 class="title" style="right:auto;"
+      ng-bind="$demo.component + ': ' + ($demo.name | humanize)">
+  </h1>
+  <div class="buttons right-buttons">
+    <a class="button" ng-click="demoScratch($demo); $event.stopPropagation()">
+      <i class="icon ion-code"></i>
+      Source
+    </a>
 </div>
 
 
